@@ -84,40 +84,37 @@
 
 
 
-<meta name="description" content="####安装node.js下载nodejs
-####安装hexonpm install hexo-cli -g
-####注册github
-####生成Github Pages打个比方，
+<meta name="description" content="安装node.js下载nodejs
+安装hexonpm install hexo-cli -g
+注册github生成Github Pages打个比方，
 你注册github时的username为hello,
 邮箱为xxx@123.com,
 点击 New repository 按钮，
 Repository name 那里就得填写 hello.github.io,
-然后">
+然后点击Create reposito">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建Hexo + Github Pages博客">
 <meta property="og:url" content="http://yoursite.com/2016/12/09/搭建Hexo-Github-Pages博客/index.html">
 <meta property="og:site_name" content="Vector's Blog">
-<meta property="og:description" content="####安装node.js下载nodejs
-####安装hexonpm install hexo-cli -g
-####注册github
-####生成Github Pages打个比方，
+<meta property="og:description" content="安装node.js下载nodejs
+安装hexonpm install hexo-cli -g
+注册github生成Github Pages打个比方，
 你注册github时的username为hello,
 邮箱为xxx@123.com,
 点击 New repository 按钮，
 Repository name 那里就得填写 hello.github.io,
-然后">
-<meta property="og:updated_time" content="2016-12-08T16:06:39.650Z">
+然后点击Create reposito">
+<meta property="og:updated_time" content="2016-12-08T16:10:01.247Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建Hexo + Github Pages博客">
-<meta name="twitter:description" content="####安装node.js下载nodejs
-####安装hexonpm install hexo-cli -g
-####注册github
-####生成Github Pages打个比方，
+<meta name="twitter:description" content="安装node.js下载nodejs
+安装hexonpm install hexo-cli -g
+注册github生成Github Pages打个比方，
 你注册github时的username为hello,
 邮箱为xxx@123.com,
 点击 New repository 按钮，
 Repository name 那里就得填写 hello.github.io,
-然后">
+然后点击Create reposito">
 
 
 
@@ -295,10 +292,9 @@ Repository name 那里就得填写 hello.github.io,
       
 
       
-        <p>####安装<strong>node.js</strong><br><a href="https://nodejs.org/en/" target="_blank" rel="external">下载nodejs</a></p>
-<p>####安装<strong>hexo</strong><br><code>npm install hexo-cli -g</code></p>
-<p>####注册<strong>github</strong></p>
-<p>####生成<strong>Github Pages</strong><br>打个比方，</p>
+        <h4 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装<strong>node.js</strong></h4><p><a href="https://nodejs.org/en/" target="_blank" rel="external">下载nodejs</a></p>
+<h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装<strong>hexo</strong></h4><p><code>npm install hexo-cli -g</code></p>
+<h4 id="注册github"><a href="#注册github" class="headerlink" title="注册github"></a>注册<strong>github</strong></h4><h4 id="生成Github-Pages"><a href="#生成Github-Pages" class="headerlink" title="生成Github Pages"></a>生成<strong>Github Pages</strong></h4><p>打个比方，</p>
 <p>你注册github时的username为<code>hello</code>,</p>
 <p>邮箱为<code>xxx@123.com</code>,</p>
 <p>点击 New repository 按钮，</p>
@@ -310,7 +306,8 @@ Repository name 那里就得填写 hello.github.io,
 <p>页面跳转后，随便选择一个主题，然后点击Publish Page按钮。</p>
 <p>Github Pages完成了!</p>
 <p>现在你可以在浏览器输入<code>https://hello.github.io</code>预览到Github Pages了。</p>
-<p>####安装<strong>git</strong><br><a href="https://git-scm.com/downloads" target="_blank" rel="external">下载git客户端</a></p>
+<a id="more"></a>
+<h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装<strong>git</strong></h4><p><a href="https://git-scm.com/downloads" target="_blank" rel="external">下载git客户端</a></p>
 <p>打开gitbash.exe。<br>现在我们来为本地 <code>git</code> 配置全局的 user 与 <code>email</code> 参数</p>
 <p>(这里的hello和xxx@123.com要换成你自己的)</p>
 <p>在Git Bash 里输入</p>
@@ -331,8 +328,7 @@ Repository name 那里就得填写 hello.github.io,
 <p>而Key里面要填的就是你刚才复制的东西，直接黏贴进去即可。</p>
 <p>最后按下Add SSH key，搞定！</p>
 <p>好了，前期工作准备完成后，现在可以正式来搭建博客了。</p>
-<p>####搭建博客</p>
-<p>（假设，你想把这个博客的代码放在F盘的根目录下）</p>
+<h4 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h4><p>（假设，你想把这个博客的代码放在F盘的根目录下）</p>
 <p>在Git Bash 里输入（每输完一条指令都要按一下Enter键）</p>
 <p><code>cd f:/</code></p>
 <p><code>mkdir Hexo &amp;&amp; cd Hexo</code></p>
@@ -351,8 +347,7 @@ Repository name 那里就得填写 hello.github.io,
 <li>source/ ：用于存储用户资源，比如文章与新页面等。其中以 _ 开头的文件夹中除了 _posts 文件夹中的 markdown 或 HTML 文件会在执行 generate 操作的时候被渲染添加到 public 文件夹中之外，其他均被忽略。而且在初始化博客的过程中 _posts 目录底会自带一个 hello-world.md 的文件。</li>
 <li>themes/ ：主题文件，自带默认主题 landscape 。</li>
 </ul>
-<p>####部署到 github page</p>
-<p>进入github，点击你刚才创建的hello仓库。</p>
+<h4 id="部署到-github-page"><a href="#部署到-github-page" class="headerlink" title="部署到 github page"></a>部署到 github page</h4><p>进入github，点击你刚才创建的hello仓库。</p>
 <p>点击Clone or download按钮，</p>
 <p>点击网址右边的按钮并按<code>ctrl+c</code>（即复制该网址）</p>
 <p>打开gitbash.exe。</p>
@@ -514,7 +509,7 @@ Repository name 那里就得填写 hello.github.io,
               
             
             
-              <p class="post-toc-empty">此文章未包含目錄</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装node-js"><span class="nav-number">1.</span> <span class="nav-text">安装node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装hexo"><span class="nav-number">2.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注册github"><span class="nav-number">3.</span> <span class="nav-text">注册github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成Github-Pages"><span class="nav-number">4.</span> <span class="nav-text">生成Github Pages</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装git"><span class="nav-number">5.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#搭建博客"><span class="nav-number">6.</span> <span class="nav-text">搭建博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#部署到-github-page"><span class="nav-number">7.</span> <span class="nav-text">部署到 github page</span></a></li></ol></div>
             
           </div>
         </section>
