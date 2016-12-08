@@ -233,6 +233,197 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/08/hack/" itemprop="url">
+                  hack
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-12-08T21:12:04+08:00" content="2016-12-08">
+              2016-12-08
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="ie8-兼容placeholder"><a href="#ie8-兼容placeholder" class="headerlink" title="ie8 兼容placeholder"></a>ie8 兼容placeholder</h3><h4 id="js"><a href="#js" class="headerlink" title="js"></a>js</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>( !(<span class="string">'placeholder'</span> <span class="keyword">in</span> <span class="built_in">document</span>.createElement(<span class="string">'input'</span>)) )&#123;  </div><div class="line">    $(<span class="string">'input[placeholder],textarea[placeholder]'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;   </div><div class="line">      <span class="keyword">var</span> that = $(<span class="keyword">this</span>),   </div><div class="line">      text= that.attr(<span class="string">'placeholder'</span>);   </div><div class="line">      <span class="keyword">if</span>(that.val()===<span class="string">""</span>)&#123;   </div><div class="line">        that.val(text).addClass(<span class="string">'placeholder'</span>);   </div><div class="line">      &#125;   </div><div class="line">      that.focus(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;   </div><div class="line">        <span class="keyword">if</span>(that.val()===text)&#123;   </div><div class="line">          that.val(<span class="string">""</span>).removeClass(<span class="string">'placeholder'</span>);   </div><div class="line">        &#125;   </div><div class="line">      &#125;)   </div><div class="line">      .blur(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;   </div><div class="line">        <span class="keyword">if</span>(that.val()===<span class="string">""</span>)&#123;   </div><div class="line">          that.val(text).addClass(<span class="string">'placeholder'</span>);   </div><div class="line">        &#125;   </div><div class="line">      &#125;)   </div><div class="line">      .closest(<span class="string">'form'</span>).submit(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;   </div><div class="line">        <span class="keyword">if</span>(that.val() === text)&#123;   </div><div class="line">          that.val(<span class="string">''</span>);   </div><div class="line">        &#125;   </div><div class="line">      &#125;);   </div><div class="line">    &#125;);   </div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h4 id="css"><a href="#css" class="headerlink" title="css"></a>css</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.placeholder</span>&#123;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#888</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/08/hack/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/08/css/" itemprop="url">
+                  css
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-12-08T21:10:28+08:00" content="2016-12-08">
+              2016-12-08
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h3 id="选中文字样式"><a href="#选中文字样式" class="headerlink" title="选中文字样式"></a>选中文字样式</h3><p>####css</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-pseudo">::selection</span>&#123;</div><div class="line">    <span class="attribute">background-color</span>: green;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/08/Javascript/" itemprop="url">
                   Javascript
                 </a>
@@ -452,7 +643,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
