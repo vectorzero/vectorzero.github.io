@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -99,7 +99,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -285,7 +285,7 @@
           
             <h2 id="Code-Clip"><a href="#Code-Clip" class="headerlink" title="Code Clip"></a>Code Clip</h2><h3 id="根据屏幕大小更改样式"><a href="#根据屏幕大小更改样式" class="headerlink" title="根据屏幕大小更改样式"></a>根据屏幕大小更改样式</h3><p><strong>jQuery</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.screen.width &lt; <span class="number">1920</span>||$(<span class="built_in">window</span>).width()&lt;<span class="number">1920</span>) &#123;</div><div class="line">            $(<span class="built_in">document</span>.body).css(&#123;</div><div class="line">                <span class="string">"overflow-y"</span>: <span class="string">"auto"</span></div><div class="line">            &#125;);</div><div class="line">        &#125;;</div></pre></td></tr></table></figure></p>
 <h3 id="根据屏幕大小以及浏览器更改样式"><a href="#根据屏幕大小以及浏览器更改样式" class="headerlink" title="根据屏幕大小以及浏览器更改样式"></a>根据屏幕大小以及浏览器更改样式</h3><p><strong>html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--[if IE 8]&gt;</span></div><div class="line">&lt;script&gt;</div><div class="line">        $(document).ready(function () &#123;</div><div class="line">            window.onresize = function () &#123; location = location &#125;;</div><div class="line">            if ($(window).width() &lt; 1400) &#123;</div><div class="line">                $(".spanFont").css("font-size", "16px");</div><div class="line">            &#125; else &#123;&#125;</div><div class="line">        &#125;)</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
-<h3 id="回车登录"><a href="#回车登录" class="headerlink" title="回车登录"></a>回车登录</h3><p><strong>html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onkeydown</span>=<span class="string">"keyLogin(et);"</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="回车登录"><a href="#回车登录" class="headerlink" title="回车登录"></a>回车登录</h3><p><strong>html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onkeydown</span>=<span class="string">"keyLogin(et)"</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p><strong>jQuery</strong></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">keyLogin</span>(<span class="params">et</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span> (et.keyCode==<span class="number">13</span>||et.which==<span class="number">13</span>)</div><div class="line">            <span class="built_in">document</span>.getElementById(<span class="string">"login-btn"</span>).click();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           
@@ -636,7 +636,7 @@
 <div class="theme-info">
   主題 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -701,6 +701,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
 
