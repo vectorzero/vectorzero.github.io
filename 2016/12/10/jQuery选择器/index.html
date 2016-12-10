@@ -1,0 +1,637 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="前端开发," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="基本选择器$(&amp;quot;#myELement&amp;quot;) 选择id值等于myElement的元素
+$(&amp;quot;div&amp;quot;) 选择所有的div标签元素，返回div元素数组
+$(&amp;quot;.myClass&amp;quot;) 选择使用myClass类的css的所有元素
+$(&amp;quot;*&amp;quot;) 选择文档中的所有的元素，可进行联合选择：例如$(“#myELement,div,.myc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery选择器">
+<meta property="og:url" content="http://yoursite.com/2016/12/10/jQuery选择器/index.html">
+<meta property="og:site_name" content="Vector's Blog">
+<meta property="og:description" content="基本选择器$(&amp;quot;#myELement&amp;quot;) 选择id值等于myElement的元素
+$(&amp;quot;div&amp;quot;) 选择所有的div标签元素，返回div元素数组
+$(&amp;quot;.myClass&amp;quot;) 选择使用myClass类的css的所有元素
+$(&amp;quot;*&amp;quot;) 选择文档中的所有的元素，可进行联合选择：例如$(“#myELement,div,.myc">
+<meta property="og:updated_time" content="2016-12-10T04:09:09.121Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery选择器">
+<meta name="twitter:description" content="基本选择器$(&amp;quot;#myELement&amp;quot;) 选择id值等于myElement的元素
+$(&amp;quot;div&amp;quot;) 选择所有的div标签元素，返回div元素数组
+$(&amp;quot;.myClass&amp;quot;) 选择使用myClass类的css的所有元素
+$(&amp;quot;*&amp;quot;) 选择文档中的所有的元素，可进行联合选择：例如$(“#myELement,div,.myc">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/12/10/jQuery选择器/"/>
+
+
+  <title> jQuery选择器 | Vector's Blog </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-hk">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Vector's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            標籤
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                jQuery选择器
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-12-10T11:41:01+08:00" content="2016-12-10">
+              2016-12-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h2><p><code>$(&quot;#myELement&quot;)</code> 选择id值等于myElement的元素</p>
+<p><code>$(&quot;div&quot;)</code> 选择所有的div标签元素，返回div元素数组</p>
+<p><code>$(&quot;.myClass&quot;)</code> 选择使用myClass类的css的所有元素</p>
+<p><code>$(&quot;*&quot;)</code> 选择文档中的所有的元素，可进行联合选择：例如$(“#myELement,div,.myclass”)</p>
+<h2 id="层叠选择器"><a href="#层叠选择器" class="headerlink" title="层叠选择器"></a>层叠选择器</h2><p><code>$(&quot;form input&quot;)</code> 选择所有的form元素中的input元素</p>
+<p><code>$(&quot;#main &gt; *&quot;)</code> 选择id值为main的所有的子元素</p>
+<p><code>$(&quot;label + input&quot;)</code> 选择所有的label元素的下一个input元素节点，<br>经测试选择器返回的是label标签后面直接跟一个input标签的所有input标签元素</p>
+<p><code>$(&quot;#prev ~ div&quot;)</code>同胞选择器，该选择器返回的为id为prev的标签元素的所有的属于同一个父元素的div标签</p>
+<a id="more"></a>
+<h2 id="基本过滤选择器"><a href="#基本过滤选择器" class="headerlink" title="基本过滤选择器"></a>基本过滤选择器</h2><p><code>$(&quot;tr:first&quot;)</code> 选择所有tr元素的第一个</p>
+<p><code>$(&quot;tr:last&quot;)</code> 选择所有tr元素的最后一个</p>
+<p><code>$(&quot;input:not(:checked) + span&quot;)</code> 过滤掉：checked的选择器的所有的input元素</p>
+<p><code>$(&quot;tr:even&quot;)</code> 选择所有的tr元素的第0，2，4… …个元素<br>（注意：因为所选择的多个元素时为数组，所以序号是从0开始）</p>
+<p><code>$(&quot;tr:odd&quot;)</code> 选择所有的tr元素的第1，3，5… …个元素</p>
+<p><code>$(&quot;td:eq(2)&quot;)</code> 选择所有的td元素中序号为2的那个td元素</p>
+<p><code>$(&quot;td:gt(4)&quot;)</code> 选择td元素中序号大于4的所有td元素</p>
+<p><code>$(&quot;td:ll(4)&quot;)</code> 选择td元素中序号小于4的所有的td元素</p>
+<p><code>$(&quot;:header&quot;)</code></p>
+<p><code>$(&quot;div:animated&quot;)</code></p>
+<h2 id="内容过滤选择器"><a href="#内容过滤选择器" class="headerlink" title="内容过滤选择器"></a>内容过滤选择器</h2><p><code>$(&quot;div:contains(&#39;John&#39;)&quot;)</code> 选择所有div中含有John文本的元素</p>
+<p><code>$(&quot;td:empty&quot;)</code> 选择所有的为空（也不包括文本节点）的td元素的数组</p>
+<p><code>$(&quot;div:has(p)&quot;)</code> 选择所有含有p标签的div元素</p>
+<p><code>$(&quot;td:parent&quot;)</code> 选择所有的以td为父节点的元素数组</p>
+<h2 id="可视化过滤选择器"><a href="#可视化过滤选择器" class="headerlink" title="可视化过滤选择器"></a>可视化过滤选择器</h2><p><code>$(&quot;div:hidden&quot;)</code> 选择所有的被hidden的div元素</p>
+<p><code>$(&quot;div:visible&quot;)</code> 选择所有的可视化的div元素</p>
+<h2 id="属性过滤选择器"><a href="#属性过滤选择器" class="headerlink" title="属性过滤选择器"></a>属性过滤选择器</h2><p><code>$(&quot;div[id]&quot;)</code> 选择所有含有id属性的div元素</p>
+<p><code>$(&quot;input[name=&#39;newsletter&#39;]&quot;)</code> 选择所有的name属性等于’newsletter’的input元素</p>
+<p><code>$(&quot;input[name!=&#39;newsletter&#39;]&quot;)</code> 选择所有的name属性不等于’newsletter’的input元素</p>
+<p><code>$(&quot;input[name^=&#39;news&#39;]&quot;)</code> 选择所有的name属性以’news’开头的input元素</p>
+<p><code>$(&quot;input[name$=&#39;news&#39;]&quot;)</code> 选择所有的name属性以’news’结尾的input元素</p>
+<p><code>$(&quot;input[name*=&#39;man&#39;]&quot;)</code> 选择所有的name属性包含’news’的input元素</p>
+<p><code>$(&quot;input[id][name$=&#39;man&#39;]&quot;)</code> 可以使用多个属性进行联合选择，该选择器是得到所有的含有id属性并且那么属性以man结尾的元素</p>
+<h2 id="子元素过滤选择器"><a href="#子元素过滤选择器" class="headerlink" title="子元素过滤选择器"></a>子元素过滤选择器</h2><p><code>$(&quot;ul li:nth-child(2)&quot;)</code></p>
+<p><code>$(&quot;ul li:nth-child(odd)&quot;)</code></p>
+<p><code>$(&quot;ul li:nth-child(3n + 1)&quot;)</code></p>
+<p><code>$(&quot;div span:first-child&quot;)</code> 返回所有的div元素的第一个子节点的数组</p>
+<p><code>$(&quot;div span:last-child&quot;)</code> 返回所有的div元素的最后一个节点的数组</p>
+<p><code>$(&quot;div button:only-child&quot;)</code> 返回所有的div中只有唯一一个子节点的所有子节点的数组</p>
+<h2 id="表单元素选择器"><a href="#表单元素选择器" class="headerlink" title="表单元素选择器"></a>表单元素选择器</h2><p><code>$(&quot;:input&quot;)</code> 选择所有的表单输入元素，包括input, textarea, select 和 button</p>
+<p><code>$(&quot;:text&quot;)</code> 选择所有的text input元素</p>
+<p><code>$(&quot;:password&quot;)</code> 选择所有的password input元素</p>
+<p><code>$(&quot;:radio&quot;)</code> 选择所有的radio input元素</p>
+<p><code>$(&quot;:checkbox&quot;)</code> 选择所有的checkbox input元素</p>
+<p><code>$(&quot;:submit&quot;)</code> 选择所有的submit input元素</p>
+<p><code>$(&quot;:image&quot;)</code> 选择所有的image input元素</p>
+<p><code>$(&quot;:reset&quot;)</code> 选择所有的reset input元素</p>
+<p><code>$(&quot;:button&quot;)</code> 选择所有的button input元素</p>
+<p><code>$(&quot;:file&quot;)</code> 选择所有的file input元素</p>
+<p><code>$(&quot;:hidden&quot;)</code> 选择所有类型为hidden的input元素或表单的隐藏域</p>
+<h2 id="表单元素过滤选择器"><a href="#表单元素过滤选择器" class="headerlink" title="表单元素过滤选择器"></a>表单元素过滤选择器</h2><p><code>$(&quot;:enabled&quot;)</code> 选择所有的可操作的表单元素</p>
+<p><code>$(&quot;:disabled&quot;)</code> 选择所有的不可操作的表单元素</p>
+<p><code>$(&quot;:checked&quot;)</code> 选择所有的被checked的表单元素</p>
+<p><code>$(&quot;select option:selected&quot;)</code> 选择所有的select 的子元素中被selected的元素</p>
+<p><code>$(&quot;input[@name=hello]&quot;).parent().prev().text()</code><br>选取一个name为”hello”的input text框的上一个td的text值</p>
+<p><code>$(&quot;input[@name^=&#39;S_&#39;]&quot;).not(&quot;[@name$=&#39;_R&#39;]&quot;)</code><br>选取一个名字以”S_”开始，并且不是以”_R”结尾的input    </p>
+<p><code>$(&quot;input[@name=radio_01][@checked]&quot;).val()</code><br>选取一个名为radio_01的radio所选的值</p>
+<p><code>$(&quot;A B&quot;)</code> 查找A元素下面的所有子节点，包括非直接子节点</p>
+<p><code>$(&quot;A&gt;B&quot;)</code> 查找A元素下面的直接子节点</p>
+<p><code>$(&quot;A+B&quot;)</code> 查找A元素后面的兄弟节点，包括非直接子节点</p>
+<p><code>$(&quot;A~B&quot;)</code> 查找A元素后面的兄弟节点，不包括非直接子节点</p>
+<h3 id="1-quot-A-B-quot-查找A元素下面的所有子节点，包括非直接子节点"><a href="#1-quot-A-B-quot-查找A元素下面的所有子节点，包括非直接子节点" class="headerlink" title="(1) $(&quot;A B&quot;) 查找A元素下面的所有子节点，包括非直接子节点"></a>(1) <code>$(&quot;A B&quot;)</code> 查找A元素下面的所有子节点，包括非直接子节点</h3><p><strong>例子：</strong>找到表单中所有的 input 元素</p>
+<p><strong>html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span>Name:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"name"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>Newsletter:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"newsletter"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"none"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>jQuery</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"form input"</span>)</div></pre></td></tr></table></figure></p>
+<p><strong>结果</strong><br><code>[ &lt;input name=&quot;name&quot; /&gt;, &lt;input name=&quot;newsletter&quot; /&gt; ]</code></p>
+<h3 id="2-quot-A-gt-B-quot-查找A元素下面的直接子节点"><a href="#2-quot-A-gt-B-quot-查找A元素下面的直接子节点" class="headerlink" title="(2) $(&quot;A&gt;B&quot;) 查找A元素下面的直接子节点"></a>(2) <code>$(&quot;A&gt;B&quot;)</code> 查找A元素下面的直接子节点</h3><p><strong>例子：</strong>匹配表单中所有的子级input元素。</p>
+<p><strong>html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span>Name:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"name"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>Newsletter:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"newsletter"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"none"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>jQuery</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"form &gt; input"</span>)</div></pre></td></tr></table></figure></p>
+<p><strong>结果</strong><br><code>[ &lt;input name=&quot;name&quot; /&gt; &gt;</code></p>
+<h3 id="3-quot-A-B-quot-查找A元素后面的兄弟节点，包括非直接子节点"><a href="#3-quot-A-B-quot-查找A元素后面的兄弟节点，包括非直接子节点" class="headerlink" title="(3) $(&quot;A+B&quot;) 查找A元素后面的兄弟节点，包括非直接子节点"></a>(3) <code>$(&quot;A+B&quot;)</code> 查找A元素后面的兄弟节点，包括非直接子节点</h3><p><strong>例子：</strong>匹配所有跟在 label 后面的 input 元素</p>
+<p><strong>html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span>Name:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"name"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>Newsletter:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"newsletter"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"none"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>jQuery</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"label + input"</span>)</div></pre></td></tr></table></figure></p>
+<p><strong>结果</strong><br><code>[ &lt;input name=&quot;name&quot; /&gt;, &lt;input name=&quot;newsletter&quot; /&gt; ]</code></p>
+<h3 id="4-quot-A-B-quot-查找A元素后面的兄弟节点，不包括非直接子节点"><a href="#4-quot-A-B-quot-查找A元素后面的兄弟节点，不包括非直接子节点" class="headerlink" title="(4) $(&quot;A~B&quot;) 查找A元素后面的兄弟节点，不包括非直接子节点"></a>(4) <code>$(&quot;A~B&quot;)</code> 查找A元素后面的兄弟节点，不包括非直接子节点</h3><p><strong>例子：</strong>找到所有与表单同辈的 input 元素</p>
+<p><strong>html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span>Name:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"name"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>Newsletter:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"newsletter"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"none"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>jQuery</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"form ~ input"</span>)</div></pre></td></tr></table></figure></p>
+<p><strong>结果</strong><br><code>[ &lt;input name=&quot;none&quot; /&gt; ]</code></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端开发/" rel="tag">#前端开发</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/10/Sublime-Text-3/" rel="next" title="Sublime Text 3">
+                <i class="fa fa-chevron-left"></i> Sublime Text 3
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="林某亮" />
+          <p class="site-author-name" itemprop="name">林某亮</p>
+          <p class="site-description motion-element" itemprop="description">满地都是六便士，他却抬头看见了月亮</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">標籤</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本选择器"><span class="nav-number">1.</span> <span class="nav-text">基本选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层叠选择器"><span class="nav-number">2.</span> <span class="nav-text">层叠选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本过滤选择器"><span class="nav-number">3.</span> <span class="nav-text">基本过滤选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容过滤选择器"><span class="nav-number">4.</span> <span class="nav-text">内容过滤选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可视化过滤选择器"><span class="nav-number">5.</span> <span class="nav-text">可视化过滤选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性过滤选择器"><span class="nav-number">6.</span> <span class="nav-text">属性过滤选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子元素过滤选择器"><span class="nav-number">7.</span> <span class="nav-text">子元素过滤选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表单元素选择器"><span class="nav-number">8.</span> <span class="nav-text">表单元素选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表单元素过滤选择器"><span class="nav-number">9.</span> <span class="nav-text">表单元素过滤选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-quot-A-B-quot-查找A元素下面的所有子节点，包括非直接子节点"><span class="nav-number">9.1.</span> <span class="nav-text">(1) $("A B") 查找A元素下面的所有子节点，包括非直接子节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-quot-A-gt-B-quot-查找A元素下面的直接子节点"><span class="nav-number">9.2.</span> <span class="nav-text">(2) $("A>B") 查找A元素下面的直接子节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-quot-A-B-quot-查找A元素后面的兄弟节点，包括非直接子节点"><span class="nav-number">9.3.</span> <span class="nav-text">(3) $("A+B") 查找A元素后面的兄弟节点，包括非直接子节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-quot-A-B-quot-查找A元素后面的兄弟节点，不包括非直接子节点"><span class="nav-number">9.4.</span> <span class="nav-text">(4) $("A~B") 查找A元素后面的兄弟节点，不包括非直接子节点</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">林某亮</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
