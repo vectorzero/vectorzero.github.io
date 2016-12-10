@@ -84,15 +84,15 @@
 
 
 
-<meta name="description" content="less is more">
+<meta name="description" content="满地都是六便士，他却抬头看见了月亮">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Vector's Blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Vector's Blog">
-<meta property="og:description" content="less is more">
+<meta property="og:description" content="满地都是六便士，他却抬头看见了月亮">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vector's Blog">
-<meta name="twitter:description" content="less is more">
+<meta name="twitter:description" content="满地都是六便士，他却抬头看见了月亮">
 
 
 
@@ -277,20 +277,12 @@
       
         
           <h2 id="下载Sublime-Text-3"><a href="#下载Sublime-Text-3" class="headerlink" title="下载Sublime Text 3"></a>下载Sublime Text 3</h2><p><a href="http://www.sublimetext.com/3">SublimeText3官网下载</a></p>
-<h2 id="安装-Package-Control"><a href="#安装-Package-Control" class="headerlink" title="安装 Package Control"></a>安装 Package Control</h2><ol>
-<li><p>按 <em>Ctrl+`</em> 调出 console</p>
-</li>
-<li><p>粘贴以下代码到底部命令行并回车<br><code>import urllib.request,os; pf = &#39;Package Control.sublime-package&#39;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), &#39;wb&#39;).write(urllib.request.urlopen( &#39;http://sublime.wbond.net/&#39; + pf.replace(&#39; &#39;,&#39;%20&#39;)).read())</code></p>
-</li>
-<li><p>重启Sublime Text 3</p>
-</li>
-<li><p>如果在 <em>perferences</em> -&gt; <em>package settings</em> 中看到 <em>package control</em> 这一项，则表示安装成功</p>
-</li>
-</ol>
-<h2 id="使用-Package-Control-安装插件"><a href="#使用-Package-Control-安装插件" class="headerlink" title="使用 Package Control 安装插件"></a>使用 Package Control 安装插件</h2><ol>
-<li>按下 <em>Ctrl+Shift+P</em> 调出命令面板</li>
-<li>输入 <code>install</code> 调出 Install Package 选项并回车，然后在列表中选中要安装的插件</li>
-</ol>
+<h2 id="安装-Package-Control"><a href="#安装-Package-Control" class="headerlink" title="安装 Package Control"></a>安装 Package Control</h2><p>(1) 按 <em>Ctrl+`</em> 调出 console</p>
+<p>(2) 粘贴以下代码到底部命令行并回车<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import urllib.request,os; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), &apos;wb&apos;).write(urllib.request.urlopen( &apos;http://sublime.wbond.net/&apos; + pf.replace(&apos; &apos;,&apos;%20&apos;)).read())</div></pre></td></tr></table></figure></p>
+<p>(3) 重启Sublime Text 3</p>
+<p>(4) 如果在 <em>perferences</em> -&gt; <em>package settings</em> 中看到 <em>package control</em> 这一项，则表示安装成功</p>
+<h2 id="使用-Package-Control-安装插件"><a href="#使用-Package-Control-安装插件" class="headerlink" title="使用 Package Control 安装插件"></a>使用 Package Control 安装插件</h2><p>(1) 按下 <em>Ctrl+Shift+P</em> 调出命令面板</p>
+<p>(2) 输入 <code>install</code> 调出 Install Package 选项并回车，然后在列表中选中要安装的插件</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/12/10/Sublime-Text-3/#more" rel="contents">
               閱讀全文 &raquo;
@@ -714,208 +706,13 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/08/Javascript/" itemprop="url">
-                  Javascript
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2016-12-08T20:58:21+08:00" content="2016-12-08">
-              2016-12-08
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="回车登录"><a href="#回车登录" class="headerlink" title="回车登录"></a>回车登录</h3><h4 id="html"><a href="#html" class="headerlink" title="html"></a>html</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onkeydown</span>=<span class="string">"keyLogin();"</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="js"><a href="#js" class="headerlink" title="js"></a>js</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">keyLogin</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span> (event.keyCode==<span class="number">13</span>)</div><div class="line">            <span class="built_in">document</span>.getElementById(<span class="string">"login-btn"</span>).click();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/08/Javascript/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/07/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2016-12-07T23:27:38+08:00" content="2016-12-07">
-              2016-12-07
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -947,9 +744,9 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
-               alt="vector" />
-          <p class="site-author-name" itemprop="name">vector</p>
-          <p class="site-description motion-element" itemprop="description">less is more</p>
+               alt="林某亮" />
+          <p class="site-author-name" itemprop="name">林某亮</p>
+          <p class="site-description motion-element" itemprop="description">满地都是六便士，他却抬头看见了月亮</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -1005,7 +802,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">vector</span>
+  <span class="author" itemprop="copyrightHolder">林某亮</span>
 </div>
 
 <div class="powered-by">
