@@ -276,13 +276,11 @@
 
       
         
-          <h3 id="回车登录"><a href="#回车登录" class="headerlink" title="回车登录"></a>回车登录</h3><h4 id="html"><a href="#html" class="headerlink" title="html"></a>html</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onkeydown</span>=<span class="string">"keyLogin();"</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="js"><a href="#js" class="headerlink" title="js"></a>js</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">keyLogin</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span> (event.keyCode==<span class="number">13</span>)</div><div class="line">            <span class="built_in">document</span>.getElementById(<span class="string">"login-btn"</span>).click();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/08/Javascript/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
+          
+            <h3 id="js实现数字数组升序和降序排列"><a href="#js实现数字数组升序和降序排列" class="headerlink" title="js实现数字数组升序和降序排列"></a>js实现数字数组升序和降序排列</h3><p><strong>升序</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> theArray=[<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">15</span>,<span class="number">8</span>,<span class="number">12</span>,<span class="number">11</span>,<span class="number">7</span>];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">des</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> a-b;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(theArray.sort(des));</div></pre></td></tr></table></figure></p>
+<p><strong>降序</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> theArray=[<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">15</span>,<span class="number">8</span>,<span class="number">12</span>,<span class="number">11</span>,<span class="number">7</span>];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">des</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> b-a;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(theArray.sort(des));</div></pre></td></tr></table></figure></p>
+
+          
         
       
     </div>
