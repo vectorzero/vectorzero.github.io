@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -77,7 +77,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.2" />
 
 
 
@@ -109,7 +109,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -182,6 +182,8 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
             首頁
           </a>
         </li>
@@ -190,6 +192,8 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
             歸檔
           </a>
         </li>
@@ -197,6 +201,8 @@
         
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             標籤
           </a>
@@ -379,6 +385,27 @@
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>---------------<br/>Enjoy it ? Donate me ! <br/>欣赏此文？求鼓励，求支持！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.jpg" alt="林某亮 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="林某亮 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -496,6 +523,26 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/vectorlin" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/xianliangyun" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
         </div>
 
         
@@ -513,7 +560,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用的CSS-hack方式"><span class="nav-number">1.</span> <span class="nav-text">常用的CSS hack方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#区别FF，IE7，IE6"><span class="nav-number">2.</span> <span class="nav-text">区别FF，IE7，IE6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE8-兼容placeholder"><span class="nav-number">3.</span> <span class="nav-text">IE8 兼容placeholder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bootstrap-3兼容IE8浏览器"><span class="nav-number">4.</span> <span class="nav-text">Bootstrap 3兼容IE8浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容IE8的rgba-的方法"><span class="nav-number">5.</span> <span class="nav-text">兼容IE8的rgba()的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE8里点击按钮、链接会出现虚线边框的问题"><span class="nav-number">6.</span> <span class="nav-text">IE8里点击按钮、链接会出现虚线边框的问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用的CSS-hack方式"><span class="nav-text">常用的CSS hack方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#区别FF，IE7，IE6"><span class="nav-text">区别FF，IE7，IE6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE8-兼容placeholder"><span class="nav-text">IE8 兼容placeholder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bootstrap-3兼容IE8浏览器"><span class="nav-text">Bootstrap 3兼容IE8浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容IE8的rgba-的方法"><span class="nav-text">兼容IE8的rgba()的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE8里点击按钮、链接会出现虚线边框的问题"><span class="nav-text">IE8里点击按钮、链接会出现虚线边框的问题</span></a></li></ol></div>
             
           </div>
         </section>
@@ -546,7 +593,7 @@
 <div class="theme-info">
   主題 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -612,6 +659,13 @@
   
   
 
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
@@ -642,6 +696,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 

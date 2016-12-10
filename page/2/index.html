@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="林某亮" />
 
 
 
@@ -77,7 +77,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.2" />
 
 
 
@@ -99,7 +99,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -174,6 +174,8 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
             首頁
           </a>
         </li>
@@ -182,6 +184,8 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
             歸檔
           </a>
         </li>
@@ -189,6 +193,8 @@
         
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             標籤
           </a>
@@ -211,6 +217,204 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/08/code-clip/" itemprop="url">
+                  code clip
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-12-08T22:30:04+08:00" content="2016-12-08">
+              2016-12-08
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Code-Clip"><a href="#Code-Clip" class="headerlink" title="Code Clip"></a>Code Clip</h2><h3 id="根据屏幕大小更改样式"><a href="#根据屏幕大小更改样式" class="headerlink" title="根据屏幕大小更改样式"></a>根据屏幕大小更改样式</h3><p><strong>jQuery</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.screen.width &lt; <span class="number">1920</span>||$(<span class="built_in">window</span>).width()&lt;<span class="number">1920</span>) &#123;</div><div class="line">            $(<span class="built_in">document</span>.body).css(&#123;</div><div class="line">                <span class="string">"overflow-y"</span>: <span class="string">"auto"</span></div><div class="line">            &#125;);</div><div class="line">        &#125;;</div></pre></td></tr></table></figure></p>
+<h3 id="根据屏幕大小以及浏览器更改样式"><a href="#根据屏幕大小以及浏览器更改样式" class="headerlink" title="根据屏幕大小以及浏览器更改样式"></a>根据屏幕大小以及浏览器更改样式</h3><p><strong>html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--[if IE 8]&gt;</span></div><div class="line">&lt;script&gt;</div><div class="line">        $(document).ready(function () &#123;</div><div class="line">            window.onresize = function () &#123; location = location &#125;;</div><div class="line">            if ($(window).width() &lt; 1400) &#123;</div><div class="line">                $(".spanFont").css("font-size", "16px");</div><div class="line">            &#125; else &#123;&#125;</div><div class="line">        &#125;)</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="回车登录"><a href="#回车登录" class="headerlink" title="回车登录"></a>回车登录</h3><p><strong>html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onkeydown</span>=<span class="string">"keyLogin(et);"</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>jQuery</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">keyLogin</span>(<span class="params">et</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span> (et.keyCode==<span class="number">13</span>||et.which==<span class="number">13</span>)</div><div class="line">            <span class="built_in">document</span>.getElementById(<span class="string">"login-btn"</span>).click();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/08/hack/" itemprop="url">
+                  hack
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-12-08T21:12:04+08:00" content="2016-12-08">
+              2016-12-08
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="常用的CSS-hack方式"><a href="#常用的CSS-hack方式" class="headerlink" title="常用的CSS hack方式"></a>常用的CSS hack方式</h3><p>方式一 <strong>条件注释法</strong></p>
+<p>只在IE下生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[if IE]&gt;</div><div class="line">  这段文字只在IE浏览器显示</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
+<p>只在IE6下生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[if IE 6]&gt;</div><div class="line">  这段文字只在IE6浏览器显示</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
+<p>只在IE6以上版本生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[if gte IE 6]&gt;</div><div class="line">  这段文字只在IE6以上(包括)版本IE浏览器显示</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
+<p>只在IE8上不生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[if ! IE 8]&gt;</div><div class="line">  这段文字在非IE8浏览器显示</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
+<p>非IE浏览器生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[if !IE]&gt;</div><div class="line">  这段文字只在非IE浏览器显示</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/08/hack/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -306,208 +510,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/08/Javascript/" itemprop="url">
-                  Javascript
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2016-12-08T20:58:21+08:00" content="2016-12-08">
-              2016-12-08
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="js实现数字数组升序和降序排列"><a href="#js实现数字数组升序和降序排列" class="headerlink" title="js实现数字数组升序和降序排列"></a>js实现数字数组升序和降序排列</h3><p><strong>升序</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> theArray=[<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">15</span>,<span class="number">8</span>,<span class="number">12</span>,<span class="number">11</span>,<span class="number">7</span>];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">des</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> a-b;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(theArray.sort(des));</div></pre></td></tr></table></figure></p>
-<p><strong>降序</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> theArray=[<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">15</span>,<span class="number">8</span>,<span class="number">12</span>,<span class="number">11</span>,<span class="number">7</span>];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">des</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> b-a;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(theArray.sort(des));</div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/07/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2016-12-07T23:27:38+08:00" content="2016-12-07">
-              2016-12-07
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -570,6 +577,26 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/vectorlin" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/xianliangyun" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
         </div>
 
         
@@ -609,7 +636,7 @@
 <div class="theme-info">
   主題 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -675,6 +702,13 @@
   
   
 
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
   
 
   
@@ -701,6 +735,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
