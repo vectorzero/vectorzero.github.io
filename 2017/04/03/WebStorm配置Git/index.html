@@ -84,15 +84,22 @@
 
 
 
-<meta name="description" content="满地都是六便士他却抬头看见了月亮">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Vector's Blog">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta name="description" content="点击WebStorm的设置按钮
+进入设置面板后，直接在左上角搜索github（这个也算是WebStorm方便功能之一，很快速定位设置项），然后填入你github的账户名和密码，然后按一下Test看看是否连接成功
+成功连接后，你就已经登录到Github账户了，但这还不够，你还得让WebStorm能够支持到Git操作，那么我们首先先去https://code.google.com/p/msysgit/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WebStorm配置Git">
+<meta property="og:url" content="http://yoursite.com/2017/04/03/WebStorm配置Git/index.html">
 <meta property="og:site_name" content="Vector's Blog">
-<meta property="og:description" content="满地都是六便士他却抬头看见了月亮">
+<meta property="og:description" content="点击WebStorm的设置按钮
+进入设置面板后，直接在左上角搜索github（这个也算是WebStorm方便功能之一，很快速定位设置项），然后填入你github的账户名和密码，然后按一下Test看看是否连接成功
+成功连接后，你就已经登录到Github账户了，但这还不够，你还得让WebStorm能够支持到Git操作，那么我们首先先去https://code.google.com/p/msysgit/">
+<meta property="og:updated_time" content="2017-04-03T08:34:57.964Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vector's Blog">
-<meta name="twitter:description" content="满地都是六便士他却抬头看见了月亮">
+<meta name="twitter:title" content="WebStorm配置Git">
+<meta name="twitter:description" content="点击WebStorm的设置按钮
+进入设置面板后，直接在左上角搜索github（这个也算是WebStorm方便功能之一，很快速定位设置项），然后填入你github的账户名和密码，然后按一下Test看看是否连接成功
+成功连接后，你就已经登录到Github账户了，但这还不够，你还得让WebStorm能够支持到Git操作，那么我们首先先去https://code.google.com/p/msysgit/">
 
 
 
@@ -113,10 +120,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/page/2/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/03/WebStorm配置Git/"/>
 
 
-  <title> Vector's Blog </title>
+  <title> WebStorm配置Git | Vector's Blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -137,9 +144,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -216,9 +221,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -238,10 +243,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/01/20/webpack/" itemprop="url">
-                  webpack
-                </a>
+                WebStorm配置Git
               
             
           </h1>
@@ -253,8 +255,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-20T22:51:54+08:00" content="2017-01-20">
-              2017-01-20
+            <time itemprop="dateCreated" datetime="2017-04-03T16:26:26+08:00" content="2017-04-03">
+              2017-04-03
             </time>
           </span>
 
@@ -264,8 +266,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/01/20/webpack/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/20/webpack/" itemprop="commentsCount"></span>
+                <a href="/2017/04/03/WebStorm配置Git/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/03/WebStorm配置Git/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -275,7 +277,7 @@
 
           
           
-             <span id="/2017/01/20/webpack/" class="leancloud_visitors" data-flag-title="webpack">
+             <span id="/2017/04/03/WebStorm配置Git/" class="leancloud_visitors" data-flag-title="WebStorm配置Git">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -297,275 +299,74 @@
       
 
       
-        
-          <h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p><code>win+R</code> 输入<code>cmd</code> 并回车</p>
-<p>输入 <code>node -v</code> 查看node版本</p>
-<p>输入 <code>npm -v</code> 查看npm版本</p>
-<h3 id="安装webpack"><a href="#安装webpack" class="headerlink" title="安装webpack"></a>安装webpack</h3><p>输入 <code>npm install webpack -g</code></p>
-<p>此时 Webpack 已经安装到了全局环境下，可以通过命令行 <code>webpack -h</code> 查看。</p>
-<p>通常我们会将 Webpack 安装到项目的依赖中，</p>
-<p>这样就可以使用项目本地版本的 Webpack。</p>
-<p>进入项目目录，若没有package.json，</p>
-<p>在项目目录下按 <code>shift+鼠标右键</code> 选中“在此处打开命令窗口”，</p>
-<p>输入 <code>npm init</code> 并且一路回车即可。</p>
-<p>接下来直接输入 <code>npm install webpack --save-dev</code></p>
-<p>若你看到node_module文件夹，则说明你安装成功</p>
-<p>（PS：安装指定版本的 webpack，请输入 npm install webpack@1.12.x –save-dev）</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/01/20/webpack/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+        <p>点击WebStorm的设置按钮</p>
+<p>进入设置面板后，直接在左上角搜索github（这个也算是WebStorm方便功能之一，很快速定位设置项），然后填入你github的账户名和密码，然后按一下Test看看是否连接成功</p>
+<p>成功连接后，你就已经登录到Github账户了，但这还不够，你还得让WebStorm能够支持到Git操作，那么我们首先先去<a href="https://code.google.com/p/msysgit/downloads/list" target="_blank" rel="external">https://code.google.com/p/msysgit/downloads/list</a>下载Git，安装后，在WebStorm中查找Git，选好git.exe的路径，配置，然后按一下Test看看是否连接成功</p>
+<a id="more"></a>
+<p>打开gitbash.exe。</p>
+<p>现在我们来为本地 git 配置全局的 user 与 email 参数</p>
+<p>Ps:这里的hello和xxx@123.com要换成你自己的</p>
+<p>在Git Bash 里输入</p>
+<p><code>git config --global user.name &quot;hello&quot;</code></p>
+<p>然后按回车键，再输入</p>
+<p><code>git config --global user.email &quot;xxx@123.com&quot;</code></p>
+<p>再按回车，现在要在本地生成 SSH 秘钥，这时你要输入</p>
+<p><code>ssh-keygen -t rsa -C &quot;xxx@123.com&quot;</code></p>
+<p>然后一路回车即可。</p>
+<p>安装完之后，打开<code>C:\Users\Administrator\.ssh</code></p>
+<p>会发现其目录底下生成了两个文件，</p>
+<p>其中 <code>id_rsa</code> 是私钥，<code>id_rsa.pub</code> 是公钥。</p>
+<p>用记事本打开公钥 <code>id_rsa.pub</code>，复制里面的全部内容，提交给github。</p>
+<p>如何提交给github呢？</p>
+<p>进入你的github，点击你的头像，选 setting，</p>
+<p>再选 SSH and GPG keys，点击 New SSH key。</p>
+<p>Title那里你可以随便填，比如myProject。</p>
+<p>而Key里面要填的就是你刚才复制的东西，直接黏贴进去即可。</p>
+<p>最后按下Add SSH key，搞定！</p>
+<p>将项目导入Webstorm中<br>VCS -&gt; import into version control -&gt; create git repository</p>
+<p>创建一个名为 .gitignore 的文件，里面的内容为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">built/</div><div class="line">node_modules/</div><div class="line">.idea/</div><div class="line">npm-debug.log</div></pre></td></tr></table></figure></p>
+<p>在项目根目录处 右键 点击git bash here</p>
+<p><code>git init</code></p>
+<p><code>git add .</code></p>
+<p><code>git commit -m &quot;commitname&quot;</code></p>
+<p><code>git remote add origin https://github.com/xxxx/xxx.git</code></p>
+<p><code>git push -u origin master</code></p>
+
       
     </div>
 
     <div>
       
+        
+
+      
     </div>
 
     <div>
       
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/18/Git常用命令/" itemprop="url">
-                  Git常用命令
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-18T00:24:59+08:00" content="2016-12-18">
-              2016-12-18
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/18/Git常用命令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/18/Git常用命令/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/18/Git常用命令/" class="leancloud_visitors" data-flag-title="Git常用命令">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>---------------<br/>Enjoy it ? Donate me ! <br/>欣赏此文？求鼓励，求支持！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.jpg" alt="林某亮 WeChat Pay"/>
+          <p>微信打赏</p>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
       
       
-
-      
-        
-          <h2 id="Git常用命令"><a href="#Git常用命令" class="headerlink" title="Git常用命令"></a>Git常用命令</h2><h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><p><code>$git clone</code> #克隆远程版本库</p>
-<p><code>$git init</code> #初始化本地版本库</p>
-<h3 id="修改和提交"><a href="#修改和提交" class="headerlink" title="修改和提交"></a>修改和提交</h3><p><code>$git status</code> #查看状态</p>
-<p><code>$git diff</code> #查看变更内容</p>
-<p><code>$git add.</code> #跟踪所有改动过的文件</p>
-<p><code>$git add &lt;file&gt;</code> #跟踪指定文件</p>
-<p><code>$git mv &lt;old&gt; &lt;new&gt;</code> #文件改名</p>
-<p><code>$git rm &lt;file&gt;</code> #删除文件</p>
-<p><code>$git rm --cached &lt;file&gt;</code> #停止跟踪文件但不删除</p>
-<p><code>$git commit -m &quot;commit message&quot;</code> #提交所有更新过的文件</p>
-<p><code>$git commit --amend</code> #修改最后一次提交</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/18/Git常用命令/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/10/jQuery选择器/" itemprop="url">
-                  jQuery选择器
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-10T11:41:01+08:00" content="2016-12-10">
-              2016-12-10
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/10/jQuery选择器/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/10/jQuery选择器/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/10/jQuery选择器/" class="leancloud_visitors" data-flag-title="jQuery选择器">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="林某亮 Alipay"/>
+          <p>支付宝打赏</p>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h2><p><code>$(&quot;#myELement&quot;)</code> 选择id值等于myElement的元素</p>
-<p><code>$(&quot;div&quot;)</code> 选择所有的div标签元素，返回div元素数组</p>
-<p><code>$(&quot;.myClass&quot;)</code> 选择使用myClass类的css的所有元素</p>
-<p><code>$(&quot;*&quot;)</code> 选择文档中的所有的元素，可进行联合选择：例如$(“#myELement,div,.myclass”)</p>
-<h2 id="层叠选择器"><a href="#层叠选择器" class="headerlink" title="层叠选择器"></a>层叠选择器</h2><p><code>$(&quot;form input&quot;)</code> 选择所有的form元素中的input元素</p>
-<p><code>$(&quot;#main &gt; *&quot;)</code> 选择id值为main的所有的子元素</p>
-<p><code>$(&quot;label + input&quot;)</code> 选择所有的label元素的下一个input元素节点，<br>经测试选择器返回的是label标签后面直接跟一个input标签的所有input标签元素</p>
-<p><code>$(&quot;#prev ~ div&quot;)</code>同胞选择器，该选择器返回的为id为prev的标签元素的所有的属于同一个父元素的div标签</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/10/jQuery选择器/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
       
     </div>
+  </div>
 
-    <div>
-      
-    </div>
 
-    <div>
       
     </div>
 
@@ -573,23 +374,36 @@
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/20/form/" rel="next" title="表单">
+                <i class="fa fa-chevron-left"></i> 表单
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/03/Nodejs上传图片/" rel="prev" title="Nodejs上传图片">
+                Nodejs上传图片 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -597,6 +411,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/04/03/WebStorm配置Git/"
+           data-title="WebStorm配置Git" data-url="http://yoursite.com/2017/04/03/WebStorm配置Git/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -616,8 +438,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -680,6 +511,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -783,6 +625,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 
