@@ -239,6 +239,123 @@
             
               
                 
+                <a class="post-title-link" href="/2018/07/23/Javascript/" itemprop="url">
+                  Javascript
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-07-23T22:45:21+08:00" content="2018-07-23">
+              2018-07-23
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/07/23/Javascript/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/23/Javascript/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2018/07/23/Javascript/" class="leancloud_visitors" data-flag-title="Javascript">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="短路表达式"><a href="#短路表达式" class="headerlink" title="短路表达式"></a>短路表达式</h2><p>作为”&amp;&amp;”和”||”操作符的操作数表达式，这些表达式在进行求值时，只要最终的结果已经可以确定是真或假，求值过程便告终止，这称之为短路求值。这是这两个操作符的一个重要属性。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ||短路表达式</span></div><div class="line"><span class="keyword">var</span> foo = a || b;</div><div class="line"><span class="comment">// 相当于</span></div><div class="line"><span class="keyword">if</span>(a)&#123;</div><div class="line">    foo = a;</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    foo = b;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// &amp;&amp;短路表达式</span></div><div class="line"><span class="keyword">var</span> bar = a &amp;&amp; b;</div><div class="line"><span class="comment">// 相当于</span></div><div class="line"><span class="keyword">if</span>(a)&#123;</div><div class="line">    bar = b;</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    bar = a;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>1、在 Javascript 的逻辑运算中，0、””、null、false、undefined、NaN 都会判定为 false ，而其他都为 true ；</p>
+<p>2、因为 Javascript 的内置弱类型域 (weak-typing domain)，所以对严格的输入验证这一点不太在意，即便使用 &amp;&amp; 或者 || 运算符的运算数不是布尔值，仍然可以将它看作布尔运算。虽然如此，还是建议如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(foo)&#123; ... &#125;     <span class="comment">//不够严谨</span></div><div class="line"><span class="keyword">if</span>(!!foo)&#123; ... &#125;   <span class="comment">//更为严谨，!!可将其他类型的值转换为boolean类型</span></div></pre></td></tr></table></figure>
+<h2 id="十进制指数"><a href="#十进制指数" class="headerlink" title="十进制指数"></a>十进制指数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="number">1e2</span>) <span class="comment">//100</span></div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/07/23/Javascript/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2018/07/23/ESLint/" itemprop="url">
                   ESLint
                 </a>
@@ -298,16 +415,14 @@
 
       
         
-          
-            <h3 id="安装-ESLint"><a href="#安装-ESLint" class="headerlink" title="安装 ESLint"></a>安装 <em>ESLint</em></h3><p><code>npm i -g eslint</code></p>
-<h3 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h3><p>配置规则可查看<a href="http://eslint.cn/docs/user-guide/configuring" target="_blank" rel="external">官方文档</a></p>
+          <h3 id="安装-ESLint"><a href="#安装-ESLint" class="headerlink" title="安装 ESLint"></a>安装 <em>ESLint</em></h3><p><code>npm i -g eslint</code></p>
+<h3 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h3><p>配置规则可查看<a href="http://eslint.cn/docs/user-guide/configuring">官方文档</a></p>
 <p>在根目录下创建 <strong>.eslintrc.js</strong> ，简单配置一下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="attr">extends</span>: <span class="string">'eslint:recommended'</span>,</div><div class="line">    <span class="attr">env</span>: &#123;</div><div class="line">        <span class="attr">browser</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">node</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">commonjs</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">es6</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">mocha</span>: <span class="literal">true</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">root</span>: <span class="literal">true</span>,</div><div class="line">    <span class="attr">rules</span>: &#123;</div><div class="line">        <span class="string">'no-console'</span>: <span class="string">'off'</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="验证代码质量与规范"><a href="#验证代码质量与规范" class="headerlink" title="验证代码质量与规范"></a>验证代码质量与规范</h3><p>创建一个 <strong>app.js</strong> 文件，输入一些内容，然后通过以下命令执行验证：</p>
-<p><code>eslint app.js</code></p>
-<p> 如果你的代码不符合要求，那么控制台并会提示你哪些地方存在问题。</p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/07/23/ESLint/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -414,130 +529,11 @@
 
       
         
-          
-            <h3 id="安装Jest"><a href="#安装Jest" class="headerlink" title="安装Jest"></a>安装Jest</h3><p><code>npm install --save-dev jest</code></p>
+          <h3 id="安装Jest"><a href="#安装Jest" class="headerlink" title="安装Jest"></a>安装Jest</h3><p><code>npm install --save-dev jest</code></p>
 <h3 id="创建文件︰"><a href="#创建文件︰" class="headerlink" title="创建文件︰"></a>创建文件︰</h3><p><em>sum.js</em><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> a + b;</div><div class="line">&#125;</div><div class="line"><span class="built_in">module</span>.exports = sum;</div></pre></td></tr></table></figure></p>
 <p><em>sum.test.js</em><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> sum = <span class="built_in">require</span>(<span class="string">'./sum'</span>);</div><div class="line"></div><div class="line">test(<span class="string">'adds 1 + 2 to equal 3'</span>, () =&gt; &#123;</div><div class="line">  expect(sum(<span class="number">1</span>, <span class="number">2</span>)).toBe(<span class="number">3</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p><em>package.json</em><br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"test"</span>: <span class="string">"jest"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p> <code>yarn test</code></p>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">PASS  ./sum.test.js</div><div class="line">✓ adds 1 + 2 to equal 3 (5ms)</div></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/07/23/ES新特性/" itemprop="url">
-                  ES新特性
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-07-23T22:11:40+08:00" content="2018-07-23">
-              2018-07-23
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2018/07/23/ES新特性/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/23/ES新特性/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2018/07/23/ES新特性/" class="leancloud_visitors" data-flag-title="ES新特性">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> a = ~~(<span class="built_in">Math</span>.random())*<span class="number">10</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">`hello,<span class="subst">$&#123;a&#125;</span>`</span>);</div></pre></td></tr></table></figure>
-<h2 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="keyword">const</span> b = [<span class="number">4</span>,...a,<span class="number">6</span>];</div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">//[4,1,2,3,6]</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> &#123;c,d,...z&#125; = &#123;<span class="attr">c</span>:<span class="number">1</span>,<span class="attr">d</span>:<span class="number">2</span>,<span class="attr">e</span>:<span class="number">4</span>,<span class="attr">f</span>:<span class="number">6</span>&#125;;</div><div class="line"><span class="built_in">console</span>.log(c) <span class="comment">//1</span></div><div class="line"><span class="built_in">console</span>.log(d) <span class="comment">//2</span></div><div class="line"><span class="built_in">console</span>.log(z) <span class="comment">//&#123;e:4,f:6&#125;</span></div></pre></td></tr></table></figure>
-<h2 id="Array-find"><a href="#Array-find" class="headerlink" title="Array.find"></a>Array.find</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr = [</div><div class="line">    &#123;<span class="attr">name</span>:<span class="string">'aa'</span>,<span class="attr">value</span>:<span class="string">'1'</span>,<span class="attr">type</span>:<span class="string">'a'</span>&#125;,</div><div class="line">    &#123;<span class="attr">name</span>:<span class="string">'bb'</span>,<span class="attr">value</span>:<span class="string">'2'</span>,<span class="attr">type</span>:<span class="string">'b'</span>&#125;,</div><div class="line">    &#123;<span class="attr">name</span>:<span class="string">'cc'</span>,<span class="attr">value</span>:<span class="string">'3'</span>,<span class="attr">type</span>:<span class="string">'c'</span>&#125;,</div><div class="line">    &#123;<span class="attr">name</span>:<span class="string">'cc'</span>,<span class="attr">value</span>:<span class="string">'4'</span>,<span class="attr">type</span>:<span class="string">'d'</span>&#125;    </div><div class="line">]</div><div class="line"><span class="keyword">const</span> obj = arr.find(<span class="function"><span class="params">item</span> =&gt;</span> item.name === <span class="string">'aa'</span> &amp;&amp; item.value === <span class="string">'1'</span>);</div><div class="line"><span class="built_in">console</span>.log(obj) <span class="comment">// &#123;name:'aa',value:'1',type:'a'&#125;</span></div></pre></td></tr></table></figure>
-<h2 id="跨模块常量"><a href="#跨模块常量" class="headerlink" title="跨模块常量"></a>跨模块常量</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//a.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> A = <span class="number">1</span>;</div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> B = <span class="number">2</span>;</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//b.js</span></div><div class="line"><span class="keyword">import</span> ^ <span class="keyword">as</span> hello <span class="keyword">from</span> ‘./a.js’;</div><div class="line"><span class="built_in">console</span>.log(hello.A);<span class="comment">//1</span></div><div class="line"><span class="built_in">console</span>.log(hello.B);<span class="comment">//2</span></div></pre></td></tr></table></figure>
-<h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h2><p>如果解构不成功。变量的值就等于<code>undefined</code></p>
-<p>解构赋值允许指定默认值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> [ foo = <span class="literal">true</span> ] = [];</div><div class="line">foo <span class="comment">// true</span></div><div class="line">[ x,y = ‘b’ ] = [‘a’] <span class="comment">//x=’a’,y=’b’</span></div><div class="line">[ x,y = ‘b’] = [‘a’, <span class="literal">undefined</span>] <span class="comment">//x=’a’ ,y=’b’</span></div></pre></td></tr></table></figure></p>
-<p>注意：ES6内部使用严格相等运算符(===)判断一个位置是否有值。所以，如果一个数组成员不严格等于<code>undefined</code>，默认值是不会生效的。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2018/07/23/ES新特性/#more" rel="contents">
+            <a class="btn" href="/2018/07/23/Jest/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>

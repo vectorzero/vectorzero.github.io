@@ -239,8 +239,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/08/Javascript/" itemprop="url">
-                  Javascript
+                <a class="post-title-link" href="/2016/12/08/css/" itemprop="url">
+                  css
                 </a>
               
             
@@ -253,7 +253,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-08T20:58:21+08:00" content="2016-12-08">
+            <time itemprop="dateCreated" datetime="2016-12-08T21:10:28+08:00" content="2016-12-08">
               2016-12-08
             </time>
           </span>
@@ -264,8 +264,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/08/Javascript/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/08/Javascript/" itemprop="commentsCount"></span>
+                <a href="/2016/12/08/css/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/08/css/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -275,7 +275,7 @@
 
           
           
-             <span id="/2016/12/08/Javascript/" class="leancloud_visitors" data-flag-title="Javascript">
+             <span id="/2016/12/08/css/" class="leancloud_visitors" data-flag-title="css">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -298,17 +298,10 @@
 
       
         
-          <h2 id="短路表达式"><a href="#短路表达式" class="headerlink" title="短路表达式"></a>短路表达式</h2><p>作为”&amp;&amp;”和”||”操作符的操作数表达式，这些表达式在进行求值时，只要最终的结果已经可以确定是真或假，求值过程便告终止，这称之为短路求值。这是这两个操作符的一个重要属性。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ||短路表达式</span></div><div class="line"><span class="keyword">var</span> foo = a || b;</div><div class="line"><span class="comment">// 相当于</span></div><div class="line"><span class="keyword">if</span>(a)&#123;</div><div class="line">    foo = a;</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    foo = b;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// &amp;&amp;短路表达式</span></div><div class="line"><span class="keyword">var</span> bar = a &amp;&amp; b;</div><div class="line"><span class="comment">// 相当于</span></div><div class="line"><span class="keyword">if</span>(a)&#123;</div><div class="line">    bar = b;</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    bar = a;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>1、在 Javascript 的逻辑运算中，0、””、null、false、undefined、NaN 都会判定为 false ，而其他都为 true ；</p>
-<p>2、因为 Javascript 的内置弱类型域 (weak-typing domain)，所以对严格的输入验证这一点不太在意，即便使用 &amp;&amp; 或者 || 运算符的运算数不是布尔值，仍然可以将它看作布尔运算。虽然如此，还是建议如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(foo)&#123; ... &#125;     <span class="comment">//不够严谨</span></div><div class="line"><span class="keyword">if</span>(!!foo)&#123; ... &#125;   <span class="comment">//更为严谨，!!可将其他类型的值转换为boolean类型</span></div></pre></td></tr></table></figure>
-<h2 id="十进制指数"><a href="#十进制指数" class="headerlink" title="十进制指数"></a>十进制指数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="number">1e2</span>) <span class="comment">//100</span></div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/08/Javascript/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h3 id="选中文字样式"><a href="#选中文字样式" class="headerlink" title="选中文字样式"></a>选中文字样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-pseudo">::selection</span>&#123;</div><div class="line">    <span class="attribute">background-color</span>: green;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="垂直居中-（兼容IE6）"><a href="#垂直居中-（兼容IE6）" class="headerlink" title="垂直居中 （兼容IE6）"></a>垂直居中 （兼容IE6）</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</div><div class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</div><div class="line">    <span class="attribute">position</span>: fixed;</div><div class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">margin-left</span>: -<span class="number">100px</span>;</div><div class="line">    <span class="attribute">margin-top</span>: -<span class="number">150px</span>;</div><div class="line">    <span class="attribute">_position</span>: absoulte;</div><div class="line">    <span class="attribute">_left</span>: <span class="built_in">expression</span>(eval(document.documentElement.clientWidth/2+document.document.documentElement.scrollLeft));</div><div class="line">    <span class="attribute">_top</span>: <span class="built_in">expression</span>(eval(document.documentElement.clientHeight/2+document.document.documentElement.scrollTop));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
         
       
     </div>

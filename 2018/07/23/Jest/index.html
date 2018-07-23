@@ -94,7 +94,7 @@ sum.test.js12345const sum = require(&apos;./sum&apos;);test(&apos;adds 1 + 2 to 
 <meta property="og:description" content="安装Jestnpm install --save-dev jest
 创建文件︰sum.js1234function sum(a, b) &amp;#123;  return a + b;&amp;#125;module.exports = sum;
 sum.test.js12345const sum = require(&apos;./sum&apos;);test(&apos;adds 1 + 2 to equal 3&apos;, () =&amp;gt;">
-<meta property="og:updated_time" content="2018-07-23T14:24:58.969Z">
+<meta property="og:updated_time" content="2018-07-23T14:44:45.472Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jest">
 <meta name="twitter:description" content="安装Jestnpm install --save-dev jest
@@ -302,6 +302,7 @@ sum.test.js12345const sum = require(&apos;./sum&apos;);test(&apos;adds 1 + 2 to 
         <h3 id="安装Jest"><a href="#安装Jest" class="headerlink" title="安装Jest"></a>安装Jest</h3><p><code>npm install --save-dev jest</code></p>
 <h3 id="创建文件︰"><a href="#创建文件︰" class="headerlink" title="创建文件︰"></a>创建文件︰</h3><p><em>sum.js</em><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> a + b;</div><div class="line">&#125;</div><div class="line"><span class="built_in">module</span>.exports = sum;</div></pre></td></tr></table></figure></p>
 <p><em>sum.test.js</em><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> sum = <span class="built_in">require</span>(<span class="string">'./sum'</span>);</div><div class="line"></div><div class="line">test(<span class="string">'adds 1 + 2 to equal 3'</span>, () =&gt; &#123;</div><div class="line">  expect(sum(<span class="number">1</span>, <span class="number">2</span>)).toBe(<span class="number">3</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p><em>package.json</em><br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"test"</span>: <span class="string">"jest"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p> <code>yarn test</code></p>
 <h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">PASS  ./sum.test.js</div><div class="line">✓ adds 1 + 2 to equal 3 (5ms)</div></pre></td></tr></table></figure>
