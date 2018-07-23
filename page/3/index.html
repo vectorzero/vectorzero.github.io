@@ -239,8 +239,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/10/jQuery选择器/" itemprop="url">
-                  jQuery选择器
+                <a class="post-title-link" href="/2017/01/20/form/" itemprop="url">
+                  表单
                 </a>
               
             
@@ -253,8 +253,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-10T11:41:01+08:00" content="2016-12-10">
-              2016-12-10
+            <time itemprop="dateCreated" datetime="2017-01-20T23:22:49+08:00" content="2017-01-20">
+              2017-01-20
             </time>
           </span>
 
@@ -264,8 +264,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/10/jQuery选择器/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/10/jQuery选择器/" itemprop="commentsCount"></span>
+                <a href="/2017/01/20/form/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/20/form/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -275,7 +275,7 @@
 
           
           
-             <span id="/2016/12/10/jQuery选择器/" class="leancloud_visitors" data-flag-title="jQuery选择器">
+             <span id="/2017/01/20/form/" class="leancloud_visitors" data-flag-title="表单">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -298,16 +298,13 @@
 
       
         
-          <h2 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h2><p><code>$(&quot;#myELement&quot;)</code> 选择id值等于myElement的元素</p>
-<p><code>$(&quot;div&quot;)</code> 选择所有的div标签元素，返回div元素数组</p>
-<p><code>$(&quot;.myClass&quot;)</code> 选择使用myClass类的css的所有元素</p>
-<p><code>$(&quot;*&quot;)</code> 选择文档中的所有的元素，可进行联合选择：例如$(“#myELement,div,.myclass”)</p>
-<h2 id="层叠选择器"><a href="#层叠选择器" class="headerlink" title="层叠选择器"></a>层叠选择器</h2><p><code>$(&quot;form input&quot;)</code> 选择所有的form元素中的input元素</p>
-<p><code>$(&quot;#main &gt; *&quot;)</code> 选择id值为main的所有的子元素</p>
-<p><code>$(&quot;label + input&quot;)</code> 选择所有的label元素的下一个input元素节点，<br>经测试选择器返回的是label标签后面直接跟一个input标签的所有input标签元素</p>
-<p><code>$(&quot;#prev ~ div&quot;)</code>同胞选择器，该选择器返回的为id为prev的标签元素的所有的属于同一个父元素的div标签</p>
+          <h3 id="优雅的表单"><a href="#优雅的表单" class="headerlink" title="优雅的表单"></a>优雅的表单</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:not(</span><span class="selector-attr">[type="range"]</span>), <span class="selector-tag">textarea</span>, <span class="selector-tag">select</span> &#123;</div><div class="line"> <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#bfbfbf</span>;</div><div class="line"> <span class="attribute">padding</span>: <span class="number">0.2em</span>;</div><div class="line"> <span class="attribute">font-size</span>: <span class="number">1.1em</span>;</div><div class="line"> <span class="attribute">line-height</span>: <span class="number">1.2em</span>;</div><div class="line"> <span class="attribute">background</span>: <span class="number">#ffffff</span>;</div><div class="line"> <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(top, #ffffff 0%,#ededed 8%,#ffffff 100%);</div><div class="line"> <span class="attribute">border-radius</span>: <span class="number">4px</span>;</div><div class="line"> <span class="attribute">box-shadow</span>: <span class="number">2px</span> <span class="number">2px</span> <span class="number">5px</span> <span class="built_in">hsla</span>(0, 0%, 16.6667%, 0.1);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="针对表单的-CSS3-伪类选择器"><a href="#针对表单的-CSS3-伪类选择器" class="headerlink" title="针对表单的 CSS3 伪类选择器"></a>针对表单的 CSS3 伪类选择器</h3><p> input:required：选择必填表单域；<br> input:focus:invalid：选择当前聚焦的且含有非法输入值的表单域；<br> input:focus:valid：选择当前聚焦的且含有合法输入值的表单域。<br>我们使用上面的伪类选择器再编写三条新规则：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:required</span> &#123;</div><div class="line"> <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="built_in">rgba</span>(253, 8, 8, 0.29);</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:focus</span><span class="selector-pseudo">:invalid</span> &#123;</div><div class="line"> <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">'../img/cross.png'</span>) no-repeat right;</div><div class="line"> <span class="attribute">padding-right</span>: <span class="number">3px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:focus</span><span class="selector-pseudo">:valid</span> &#123;</div><div class="line"> <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">'../img/tick.png'</span>) no-repeat right;</div><div class="line"> <span class="attribute">padding-right</span>: <span class="number">3px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>第一个规则给必填表单域加了一点红色边框：当用户输入时，如果所输入的值不符合规<br>定格式;</p>
+<p>第二个样式会给当前的输入框加上一个红色叉号：如果输入值符合格式；</p>
+<p>第三个样式会给其加上一个绿色对号。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/10/jQuery选择器/#more" rel="contents">
+            <a class="btn" href="/2017/01/20/form/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -358,8 +355,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/10/Sublime-Text-3/" itemprop="url">
-                  Sublime Text 3
+                <a class="post-title-link" href="/2017/01/20/webpack/" itemprop="url">
+                  webpack
                 </a>
               
             
@@ -372,8 +369,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-10T09:54:55+08:00" content="2016-12-10">
-              2016-12-10
+            <time itemprop="dateCreated" datetime="2017-01-20T22:51:54+08:00" content="2017-01-20">
+              2017-01-20
             </time>
           </span>
 
@@ -383,8 +380,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/10/Sublime-Text-3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/10/Sublime-Text-3/" itemprop="commentsCount"></span>
+                <a href="/2017/01/20/webpack/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/20/webpack/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -394,7 +391,7 @@
 
           
           
-             <span id="/2016/12/10/Sublime-Text-3/" class="leancloud_visitors" data-flag-title="Sublime Text 3">
+             <span id="/2017/01/20/webpack/" class="leancloud_visitors" data-flag-title="webpack">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -417,15 +414,21 @@
 
       
         
-          <h2 id="下载Sublime-Text-3"><a href="#下载Sublime-Text-3" class="headerlink" title="下载Sublime Text 3"></a>下载Sublime Text 3</h2><p><a href="http://www.sublimetext.com/3">SublimeText3官网下载</a></p>
-<h2 id="安装-Package-Control"><a href="#安装-Package-Control" class="headerlink" title="安装 Package Control"></a>安装 Package Control</h2><p>(1) 按 <em>Ctrl+`</em> 调出 console</p>
-<p>(2) 粘贴以下代码到底部命令行并回车<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import urllib.request,os; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), &apos;wb&apos;).write(urllib.request.urlopen( &apos;http://sublime.wbond.net/&apos; + pf.replace(&apos; &apos;,&apos;%20&apos;)).read())</div></pre></td></tr></table></figure></p>
-<p>(3) 重启Sublime Text 3</p>
-<p>(4) 如果在 <em>perferences</em> -&gt; <em>package settings</em> 中看到 <em>package control</em> 这一项，则表示安装成功</p>
-<h2 id="使用-Package-Control-安装插件"><a href="#使用-Package-Control-安装插件" class="headerlink" title="使用 Package Control 安装插件"></a>使用 Package Control 安装插件</h2><p>(1) 按下 <em>Ctrl+Shift+P</em> 调出命令面板</p>
-<p>(2) 输入 <code>install</code> 调出 Install Package 选项并回车，然后在列表中选中要安装的插件</p>
+          <h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p><code>win+R</code> 输入<code>cmd</code> 并回车</p>
+<p>输入 <code>node -v</code> 查看node版本</p>
+<p>输入 <code>npm -v</code> 查看npm版本</p>
+<h3 id="安装webpack"><a href="#安装webpack" class="headerlink" title="安装webpack"></a>安装webpack</h3><p>输入 <code>npm install webpack -g</code></p>
+<p>此时 Webpack 已经安装到了全局环境下，可以通过命令行 <code>webpack -h</code> 查看。</p>
+<p>通常我们会将 Webpack 安装到项目的依赖中，</p>
+<p>这样就可以使用项目本地版本的 Webpack。</p>
+<p>进入项目目录，若没有package.json，</p>
+<p>在项目目录下按 <code>shift+鼠标右键</code> 选中“在此处打开命令窗口”，</p>
+<p>输入 <code>npm init</code> 并且一路回车即可。</p>
+<p>接下来直接输入 <code>npm install webpack --save-dev</code></p>
+<p>若你看到node_module文件夹，则说明你安装成功</p>
+<p>（PS：安装指定版本的 webpack，请输入 npm install webpack@1.12.x –save-dev）</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/10/Sublime-Text-3/#more" rel="contents">
+            <a class="btn" href="/2017/01/20/webpack/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -476,8 +479,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/09/搭建Hexo-Github-Pages博客/" itemprop="url">
-                  搭建Hexo+Github Pages博客
+                <a class="post-title-link" href="/2016/12/18/Git常用命令/" itemprop="url">
+                  Git常用命令
                 </a>
               
             
@@ -490,8 +493,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-09T00:06:01+08:00" content="2016-12-09">
-              2016-12-09
+            <time itemprop="dateCreated" datetime="2016-12-18T00:24:59+08:00" content="2016-12-18">
+              2016-12-18
             </time>
           </span>
 
@@ -501,8 +504,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/09/搭建Hexo-Github-Pages博客/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/09/搭建Hexo-Github-Pages博客/" itemprop="commentsCount"></span>
+                <a href="/2016/12/18/Git常用命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/18/Git常用命令/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -512,7 +515,7 @@
 
           
           
-             <span id="/2016/12/09/搭建Hexo-Github-Pages博客/" class="leancloud_visitors" data-flag-title="搭建Hexo+Github Pages博客">
+             <span id="/2016/12/18/Git常用命令/" class="leancloud_visitors" data-flag-title="Git常用命令">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -535,20 +538,19 @@
 
       
         
-          <h3 id="注册-Github-账号"><a href="#注册-Github-账号" class="headerlink" title="注册 Github 账号"></a>注册 Github 账号</h3><p><a href="https://github.com/">Github官网</a></p>
-<h3 id="生成-Github-Pages"><a href="#生成-Github-Pages" class="headerlink" title="生成 Github Pages"></a>生成 Github Pages</h3><p>假设，你注册github时的username为<code>hello</code>，</p>
-<p>邮箱为<code>xxx@123.com</code>。</p>
-<p>点击 New repository 即新建仓库，</p>
-<p>Repository name 那里就得填写 <code>hello.github.io</code>，</p>
-<p>然后点击Create repository。</p>
-<p>再点击右边的Settings，把页面拉到下面，</p>
-<p>你会看到一个Lauch automatic page generator 按钮，点击它。</p>
-<p>进入另一个页面后，直接拉到下面，点击右下角的Continue to layouts按钮。</p>
-<p>页面跳转后，随便选择一个主题，然后点击Publish Page按钮。</p>
-<p>Github Pages完成了!</p>
-<p>现在你可以在浏览器输入<code>https://hello.github.io</code>预览到Github Pages了。</p>
+          <h2 id="Git常用命令"><a href="#Git常用命令" class="headerlink" title="Git常用命令"></a>Git常用命令</h2><h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><p><code>$git clone</code> #克隆远程版本库</p>
+<p><code>$git init</code> #初始化本地版本库</p>
+<h3 id="修改和提交"><a href="#修改和提交" class="headerlink" title="修改和提交"></a>修改和提交</h3><p><code>$git status</code> #查看状态</p>
+<p><code>$git diff</code> #查看变更内容</p>
+<p><code>$git add.</code> #跟踪所有改动过的文件</p>
+<p><code>$git add &lt;file&gt;</code> #跟踪指定文件</p>
+<p><code>$git mv &lt;old&gt; &lt;new&gt;</code> #文件改名</p>
+<p><code>$git rm &lt;file&gt;</code> #删除文件</p>
+<p><code>$git rm --cached &lt;file&gt;</code> #停止跟踪文件但不删除</p>
+<p><code>$git commit -m &quot;commit message&quot;</code> #提交所有更新过的文件</p>
+<p><code>$git commit --amend</code> #修改最后一次提交</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/09/搭建Hexo-Github-Pages博客/#more" rel="contents">
+            <a class="btn" href="/2016/12/18/Git常用命令/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -582,7 +584,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -623,7 +625,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

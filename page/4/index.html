@@ -239,8 +239,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/08/code-clip/" itemprop="url">
-                  code clip
+                <a class="post-title-link" href="/2016/12/10/jQuery选择器/" itemprop="url">
+                  jQuery选择器
                 </a>
               
             
@@ -253,8 +253,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-08T22:30:04+08:00" content="2016-12-08">
-              2016-12-08
+            <time itemprop="dateCreated" datetime="2016-12-10T11:41:01+08:00" content="2016-12-10">
+              2016-12-10
             </time>
           </span>
 
@@ -264,8 +264,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/08/code-clip/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/08/code-clip/" itemprop="commentsCount"></span>
+                <a href="/2016/12/10/jQuery选择器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/10/jQuery选择器/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -275,7 +275,7 @@
 
           
           
-             <span id="/2016/12/08/code-clip/" class="leancloud_visitors" data-flag-title="code clip">
+             <span id="/2016/12/10/jQuery选择器/" class="leancloud_visitors" data-flag-title="jQuery选择器">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -298,131 +298,16 @@
 
       
         
-          
-            <h2 id="Code-Clip"><a href="#Code-Clip" class="headerlink" title="Code Clip"></a>Code Clip</h2><h3 id="根据屏幕大小更改样式"><a href="#根据屏幕大小更改样式" class="headerlink" title="根据屏幕大小更改样式"></a>根据屏幕大小更改样式</h3><p><strong>jQuery</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.screen.width &lt; <span class="number">1920</span>||$(<span class="built_in">window</span>).width()&lt;<span class="number">1920</span>) &#123;</div><div class="line">            $(<span class="built_in">document</span>.body).css(&#123;</div><div class="line">                <span class="string">"overflow-y"</span>: <span class="string">"auto"</span></div><div class="line">            &#125;);</div><div class="line">        &#125;;</div></pre></td></tr></table></figure></p>
-<h3 id="根据屏幕大小以及浏览器更改样式"><a href="#根据屏幕大小以及浏览器更改样式" class="headerlink" title="根据屏幕大小以及浏览器更改样式"></a>根据屏幕大小以及浏览器更改样式</h3><p><strong>html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--[if IE 8]&gt;</span></div><div class="line">&lt;script&gt;</div><div class="line">        $(document).ready(function () &#123;</div><div class="line">            window.onresize = function () &#123; location = location &#125;;</div><div class="line">            if ($(window).width() &lt; 1400) &#123;</div><div class="line">                $(".spanFont").css("font-size", "16px");</div><div class="line">            &#125; else &#123;&#125;</div><div class="line">        &#125;)</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
-<h3 id="回车登录"><a href="#回车登录" class="headerlink" title="回车登录"></a>回车登录</h3><p><strong>html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onkeydown</span>=<span class="string">"keyLogin(et)"</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><strong>jQuery</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">keyLogin</span>(<span class="params">et</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span> (et.keyCode==<span class="number">13</span>||et.which==<span class="number">13</span>)</div><div class="line">            <span class="built_in">document</span>.getElementById(<span class="string">"login-btn"</span>).click();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="禁止右键"><a href="#禁止右键" class="headerlink" title="禁止右键"></a>禁止右键</h3><p><strong>jQuery</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line">    $(<span class="built_in">document</span>).bind(<span class="string">"contextmenu"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123; </div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>; </div><div class="line">    &#125;); </div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<h3 id="页面样式切换"><a href="#页面样式切换" class="headerlink" title="页面样式切换"></a>页面样式切换</h3><p><strong>jQuery</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </div><div class="line">    $(<span class="string">"a.Styleswitcher"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </div><div class="line">        $(<span class="string">'link[rel=stylesheet]'</span>).attr(<span class="string">'href'</span> , $(<span class="keyword">this</span>).attr(<span class="string">'rel'</span>));</div><div class="line">    &#125;); </div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p><strong>html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">stylesheet</span> <span class="attr">type</span>=<span class="string">text/css</span> <span class="attr">href</span>=<span class="string">"default.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"Styleswitcher"</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">rel</span>=<span class="string">"default.css"</span>&gt;</span>Default Theme<span class="tag">&lt;/<span class="name">a</span>&gt;</span> </div><div class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"Styleswitcher"</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">rel</span>=<span class="string">"red.css"</span>&gt;</span>Red Theme<span class="tag">&lt;/<span class="name">a</span>&gt;</span> </div><div class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"Styleswitcher"</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">rel</span>=<span class="string">"blue.css"</span>&gt;</span>Blue Theme<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/08/hack/" itemprop="url">
-                  hack
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-08T21:12:04+08:00" content="2016-12-08">
-              2016-12-08
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/08/hack/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/08/hack/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/08/hack/" class="leancloud_visitors" data-flag-title="hack">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="常用的CSS-hack方式"><a href="#常用的CSS-hack方式" class="headerlink" title="常用的CSS hack方式"></a>常用的CSS hack方式</h3><p>方式一 <strong>条件注释法</strong></p>
-<p>只在IE下生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[if IE]&gt;</div><div class="line">  这段文字只在IE浏览器显示</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
-<p>只在IE6下生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[if IE 6]&gt;</div><div class="line">  这段文字只在IE6浏览器显示</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
-<p>只在IE6以上版本生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[if gte IE 6]&gt;</div><div class="line">  这段文字只在IE6以上(包括)版本IE浏览器显示</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
-<p>只在IE8上不生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[if ! IE 8]&gt;</div><div class="line">  这段文字在非IE8浏览器显示</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
-<p>非IE浏览器生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[if !IE]&gt;</div><div class="line">  这段文字只在非IE浏览器显示</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
+          <h2 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h2><p><code>$(&quot;#myELement&quot;)</code> 选择id值等于myElement的元素</p>
+<p><code>$(&quot;div&quot;)</code> 选择所有的div标签元素，返回div元素数组</p>
+<p><code>$(&quot;.myClass&quot;)</code> 选择使用myClass类的css的所有元素</p>
+<p><code>$(&quot;*&quot;)</code> 选择文档中的所有的元素，可进行联合选择：例如$(“#myELement,div,.myclass”)</p>
+<h2 id="层叠选择器"><a href="#层叠选择器" class="headerlink" title="层叠选择器"></a>层叠选择器</h2><p><code>$(&quot;form input&quot;)</code> 选择所有的form元素中的input元素</p>
+<p><code>$(&quot;#main &gt; *&quot;)</code> 选择id值为main的所有的子元素</p>
+<p><code>$(&quot;label + input&quot;)</code> 选择所有的label元素的下一个input元素节点，<br>经测试选择器返回的是label标签后面直接跟一个input标签的所有input标签元素</p>
+<p><code>$(&quot;#prev ~ div&quot;)</code>同胞选择器，该选择器返回的为id为prev的标签元素的所有的属于同一个父元素的div标签</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/08/hack/#more" rel="contents">
+            <a class="btn" href="/2016/12/10/jQuery选择器/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -473,8 +358,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/08/css/" itemprop="url">
-                  css
+                <a class="post-title-link" href="/2016/12/10/Sublime-Text-3/" itemprop="url">
+                  Sublime Text 3
                 </a>
               
             
@@ -487,8 +372,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-08T21:10:28+08:00" content="2016-12-08">
-              2016-12-08
+            <time itemprop="dateCreated" datetime="2016-12-10T09:54:55+08:00" content="2016-12-10">
+              2016-12-10
             </time>
           </span>
 
@@ -498,8 +383,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/08/css/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/08/css/" itemprop="commentsCount"></span>
+                <a href="/2016/12/10/Sublime-Text-3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/10/Sublime-Text-3/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -509,7 +394,7 @@
 
           
           
-             <span id="/2016/12/08/css/" class="leancloud_visitors" data-flag-title="css">
+             <span id="/2016/12/10/Sublime-Text-3/" class="leancloud_visitors" data-flag-title="Sublime Text 3">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -532,10 +417,141 @@
 
       
         
+          <h2 id="下载Sublime-Text-3"><a href="#下载Sublime-Text-3" class="headerlink" title="下载Sublime Text 3"></a>下载Sublime Text 3</h2><p><a href="http://www.sublimetext.com/3">SublimeText3官网下载</a></p>
+<h2 id="安装-Package-Control"><a href="#安装-Package-Control" class="headerlink" title="安装 Package Control"></a>安装 Package Control</h2><p>(1) 按 <em>Ctrl+`</em> 调出 console</p>
+<p>(2) 粘贴以下代码到底部命令行并回车<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import urllib.request,os; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), &apos;wb&apos;).write(urllib.request.urlopen( &apos;http://sublime.wbond.net/&apos; + pf.replace(&apos; &apos;,&apos;%20&apos;)).read())</div></pre></td></tr></table></figure></p>
+<p>(3) 重启Sublime Text 3</p>
+<p>(4) 如果在 <em>perferences</em> -&gt; <em>package settings</em> 中看到 <em>package control</em> 这一项，则表示安装成功</p>
+<h2 id="使用-Package-Control-安装插件"><a href="#使用-Package-Control-安装插件" class="headerlink" title="使用 Package Control 安装插件"></a>使用 Package Control 安装插件</h2><p>(1) 按下 <em>Ctrl+Shift+P</em> 调出命令面板</p>
+<p>(2) 输入 <code>install</code> 调出 Install Package 选项并回车，然后在列表中选中要安装的插件</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/10/Sublime-Text-3/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/09/搭建Hexo-Github-Pages博客/" itemprop="url">
+                  搭建Hexo+Github Pages博客
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-09T00:06:01+08:00" content="2016-12-09">
+              2016-12-09
+            </time>
+          </span>
+
           
-            <h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h3 id="选中文字样式"><a href="#选中文字样式" class="headerlink" title="选中文字样式"></a>选中文字样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-pseudo">::selection</span>&#123;</div><div class="line">    <span class="attribute">background-color</span>: green;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="垂直居中-（兼容IE6）"><a href="#垂直居中-（兼容IE6）" class="headerlink" title="垂直居中 （兼容IE6）"></a>垂直居中 （兼容IE6）</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</div><div class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</div><div class="line">    <span class="attribute">position</span>: fixed;</div><div class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">margin-left</span>: -<span class="number">100px</span>;</div><div class="line">    <span class="attribute">margin-top</span>: -<span class="number">150px</span>;</div><div class="line">    <span class="attribute">_position</span>: absoulte;</div><div class="line">    <span class="attribute">_left</span>: <span class="built_in">expression</span>(eval(document.documentElement.clientWidth/2+document.document.documentElement.scrollLeft));</div><div class="line">    <span class="attribute">_top</span>: <span class="built_in">expression</span>(eval(document.documentElement.clientHeight/2+document.document.documentElement.scrollTop));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/09/搭建Hexo-Github-Pages博客/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/09/搭建Hexo-Github-Pages博客/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/09/搭建Hexo-Github-Pages博客/" class="leancloud_visitors" data-flag-title="搭建Hexo+Github Pages博客">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="注册-Github-账号"><a href="#注册-Github-账号" class="headerlink" title="注册 Github 账号"></a>注册 Github 账号</h3><p><a href="https://github.com/">Github官网</a></p>
+<h3 id="生成-Github-Pages"><a href="#生成-Github-Pages" class="headerlink" title="生成 Github Pages"></a>生成 Github Pages</h3><p>假设，你注册github时的username为<code>hello</code>，</p>
+<p>邮箱为<code>xxx@123.com</code>。</p>
+<p>点击 New repository 即新建仓库，</p>
+<p>Repository name 那里就得填写 <code>hello.github.io</code>，</p>
+<p>然后点击Create repository。</p>
+<p>再点击右边的Settings，把页面拉到下面，</p>
+<p>你会看到一个Lauch automatic page generator 按钮，点击它。</p>
+<p>进入另一个页面后，直接拉到下面，点击右下角的Continue to layouts按钮。</p>
+<p>页面跳转后，随便选择一个主题，然后点击Publish Page按钮。</p>
+<p>Github Pages完成了!</p>
+<p>现在你可以在浏览器输入<code>https://hello.github.io</code>预览到Github Pages了。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/09/搭建Hexo-Github-Pages博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -566,7 +582,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -607,7 +623,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

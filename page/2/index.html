@@ -239,8 +239,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/01/20/form/" itemprop="url">
-                  表单
+                <a class="post-title-link" href="/2018/07/23/Command-Line-Interface/" itemprop="url">
+                  Command Line Interface
                 </a>
               
             
@@ -253,8 +253,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-20T23:22:49+08:00" content="2017-01-20">
-              2017-01-20
+            <time itemprop="dateCreated" datetime="2018-07-23T22:04:29+08:00" content="2018-07-23">
+              2018-07-23
             </time>
           </span>
 
@@ -264,8 +264,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/01/20/form/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/20/form/" itemprop="commentsCount"></span>
+                <a href="/2018/07/23/Command-Line-Interface/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/23/Command-Line-Interface/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -275,7 +275,7 @@
 
           
           
-             <span id="/2017/01/20/form/" class="leancloud_visitors" data-flag-title="表单">
+             <span id="/2018/07/23/Command-Line-Interface/" class="leancloud_visitors" data-flag-title="Command Line Interface">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -298,13 +298,130 @@
 
       
         
-          <h3 id="优雅的表单"><a href="#优雅的表单" class="headerlink" title="优雅的表单"></a>优雅的表单</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:not(</span><span class="selector-attr">[type="range"]</span>), <span class="selector-tag">textarea</span>, <span class="selector-tag">select</span> &#123;</div><div class="line"> <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#bfbfbf</span>;</div><div class="line"> <span class="attribute">padding</span>: <span class="number">0.2em</span>;</div><div class="line"> <span class="attribute">font-size</span>: <span class="number">1.1em</span>;</div><div class="line"> <span class="attribute">line-height</span>: <span class="number">1.2em</span>;</div><div class="line"> <span class="attribute">background</span>: <span class="number">#ffffff</span>;</div><div class="line"> <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(top, #ffffff 0%,#ededed 8%,#ffffff 100%);</div><div class="line"> <span class="attribute">border-radius</span>: <span class="number">4px</span>;</div><div class="line"> <span class="attribute">box-shadow</span>: <span class="number">2px</span> <span class="number">2px</span> <span class="number">5px</span> <span class="built_in">hsla</span>(0, 0%, 16.6667%, 0.1);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="针对表单的-CSS3-伪类选择器"><a href="#针对表单的-CSS3-伪类选择器" class="headerlink" title="针对表单的 CSS3 伪类选择器"></a>针对表单的 CSS3 伪类选择器</h3><p> input:required：选择必填表单域；<br> input:focus:invalid：选择当前聚焦的且含有非法输入值的表单域；<br> input:focus:valid：选择当前聚焦的且含有合法输入值的表单域。<br>我们使用上面的伪类选择器再编写三条新规则：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:required</span> &#123;</div><div class="line"> <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="built_in">rgba</span>(253, 8, 8, 0.29);</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:focus</span><span class="selector-pseudo">:invalid</span> &#123;</div><div class="line"> <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">'../img/cross.png'</span>) no-repeat right;</div><div class="line"> <span class="attribute">padding-right</span>: <span class="number">3px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:focus</span><span class="selector-pseudo">:valid</span> &#123;</div><div class="line"> <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">'../img/tick.png'</span>) no-repeat right;</div><div class="line"> <span class="attribute">padding-right</span>: <span class="number">3px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>第一个规则给必填表单域加了一点红色边框：当用户输入时，如果所输入的值不符合规<br>定格式;</p>
-<p>第二个样式会给当前的输入框加上一个红色叉号：如果输入值符合格式；</p>
-<p>第三个样式会给其加上一个绿色对号。</p>
+          
+            <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h3><p><em>lxl-cli-demo</em></p>
+<h3 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h3><p><code>cd lxl-cli-demo</code></p>
+<p><code>npm init -y</code></p>
+<h3 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h3><p><em>./bin/index.js</em><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/usr/bin/env node</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'hello cli'</span>)</div></pre></td></tr></table></figure></p>
+<h3 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h3><p><em>package.json</em><br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"lxl-cli-demo"</span>,</div><div class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0"</span>,</div><div class="line">  <span class="attr">"description"</span>: <span class="string">""</span>,</div><div class="line">  <span class="attr">"main"</span>: <span class="string">"index.js"</span>,</div><div class="line">  <span class="attr">"bin"</span>:&#123;</div><div class="line">    <span class="attr">"lxl-cli"</span>: <span class="string">"./bin/index.js"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"keywords"</span>: [],</div><div class="line">  <span class="attr">"author"</span>: <span class="string">""</span>,</div><div class="line">  <span class="attr">"license"</span>: <span class="string">"ISC"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="全局安装"><a href="#全局安装" class="headerlink" title="全局安装"></a>全局安装</h3><p><code>npm install -g</code></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>打开cmd，输入<code>lxl-cli</code></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/03/Nodejs上传图片/" itemprop="url">
+                  Nodejs上传图片
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-04-03T16:27:02+08:00" content="2017-04-03">
+              2017-04-03
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/04/03/Nodejs上传图片/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/03/Nodejs上传图片/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/04/03/Nodejs上传图片/" class="leancloud_visitors" data-flag-title="Nodejs上传图片">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>新建项目文件夹</p>
+<p>在项目目录下打开命令窗口,输入</p>
+<p><code>npm install formidable --save-dev</code></p>
+<p>新建tmp,img文件夹</p>
+<p>新建server.js,starter.js,uploader.js,shower.js文件</p>
+<p>文件内容如下所示</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2017/01/20/form/#more" rel="contents">
+            <a class="btn" href="/2017/04/03/Nodejs上传图片/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -355,8 +472,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/01/20/webpack/" itemprop="url">
-                  webpack
+                <a class="post-title-link" href="/2017/04/03/WebStorm配置Git/" itemprop="url">
+                  WebStorm配置Git
                 </a>
               
             
@@ -369,8 +486,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-20T22:51:54+08:00" content="2017-01-20">
-              2017-01-20
+            <time itemprop="dateCreated" datetime="2017-04-03T16:26:26+08:00" content="2017-04-03">
+              2017-04-03
             </time>
           </span>
 
@@ -380,8 +497,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/01/20/webpack/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/20/webpack/" itemprop="commentsCount"></span>
+                <a href="/2017/04/03/WebStorm配置Git/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/03/WebStorm配置Git/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -391,7 +508,7 @@
 
           
           
-             <span id="/2017/01/20/webpack/" class="leancloud_visitors" data-flag-title="webpack">
+             <span id="/2017/04/03/WebStorm配置Git/" class="leancloud_visitors" data-flag-title="WebStorm配置Git">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -414,143 +531,11 @@
 
       
         
-          <h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p><code>win+R</code> 输入<code>cmd</code> 并回车</p>
-<p>输入 <code>node -v</code> 查看node版本</p>
-<p>输入 <code>npm -v</code> 查看npm版本</p>
-<h3 id="安装webpack"><a href="#安装webpack" class="headerlink" title="安装webpack"></a>安装webpack</h3><p>输入 <code>npm install webpack -g</code></p>
-<p>此时 Webpack 已经安装到了全局环境下，可以通过命令行 <code>webpack -h</code> 查看。</p>
-<p>通常我们会将 Webpack 安装到项目的依赖中，</p>
-<p>这样就可以使用项目本地版本的 Webpack。</p>
-<p>进入项目目录，若没有package.json，</p>
-<p>在项目目录下按 <code>shift+鼠标右键</code> 选中“在此处打开命令窗口”，</p>
-<p>输入 <code>npm init</code> 并且一路回车即可。</p>
-<p>接下来直接输入 <code>npm install webpack --save-dev</code></p>
-<p>若你看到node_module文件夹，则说明你安装成功</p>
-<p>（PS：安装指定版本的 webpack，请输入 npm install webpack@1.12.x –save-dev）</p>
+          <p>点击WebStorm的设置按钮</p>
+<p>进入设置面板后，直接在左上角搜索github（这个也算是WebStorm方便功能之一，很快速定位设置项），然后填入你github的账户名和密码，然后按一下Test看看是否连接成功</p>
+<p>成功连接后，你就已经登录到Github账户了，但这还不够，你还得让WebStorm能够支持到Git操作，那么我们首先先去<a href="https://code.google.com/p/msysgit/downloads/list">https://code.google.com/p/msysgit/downloads/list</a>下载Git，安装后，在WebStorm中查找Git，选好git.exe的路径，配置，然后按一下Test看看是否连接成功</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2017/01/20/webpack/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/18/Git常用命令/" itemprop="url">
-                  Git常用命令
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-18T00:24:59+08:00" content="2016-12-18">
-              2016-12-18
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/18/Git常用命令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/18/Git常用命令/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/18/Git常用命令/" class="leancloud_visitors" data-flag-title="Git常用命令">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Git常用命令"><a href="#Git常用命令" class="headerlink" title="Git常用命令"></a>Git常用命令</h2><h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><p><code>$git clone</code> #克隆远程版本库</p>
-<p><code>$git init</code> #初始化本地版本库</p>
-<h3 id="修改和提交"><a href="#修改和提交" class="headerlink" title="修改和提交"></a>修改和提交</h3><p><code>$git status</code> #查看状态</p>
-<p><code>$git diff</code> #查看变更内容</p>
-<p><code>$git add.</code> #跟踪所有改动过的文件</p>
-<p><code>$git add &lt;file&gt;</code> #跟踪指定文件</p>
-<p><code>$git mv &lt;old&gt; &lt;new&gt;</code> #文件改名</p>
-<p><code>$git rm &lt;file&gt;</code> #删除文件</p>
-<p><code>$git rm --cached &lt;file&gt;</code> #停止跟踪文件但不删除</p>
-<p><code>$git commit -m &quot;commit message&quot;</code> #提交所有更新过的文件</p>
-<p><code>$git commit --amend</code> #修改最后一次提交</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/18/Git常用命令/#more" rel="contents">
+            <a class="btn" href="/2017/04/03/WebStorm配置Git/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -584,7 +569,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -625,7 +610,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

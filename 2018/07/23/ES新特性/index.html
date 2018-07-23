@@ -1,0 +1,806 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="前端开发," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="ES6模板字符串12let a = ~~(Math.random())*10;console.log(`hello,$&amp;#123;a&amp;#125;`);
+扩展运算符12345678const a = [1,2,3];const b = [4,...a,6];console.log(b); //[4,1,2,3,6]const &amp;#123;c,d,...z&amp;#125; = &amp;#123;c:1,d:2,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES新特性">
+<meta property="og:url" content="http://yoursite.com/2018/07/23/ES新特性/index.html">
+<meta property="og:site_name" content="Vector's Blog">
+<meta property="og:description" content="ES6模板字符串12let a = ~~(Math.random())*10;console.log(`hello,$&amp;#123;a&amp;#125;`);
+扩展运算符12345678const a = [1,2,3];const b = [4,...a,6];console.log(b); //[4,1,2,3,6]const &amp;#123;c,d,...z&amp;#125; = &amp;#123;c:1,d:2,">
+<meta property="og:updated_time" content="2018-07-23T14:12:41.324Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ES新特性">
+<meta name="twitter:description" content="ES6模板字符串12let a = ~~(Math.random())*10;console.log(`hello,$&amp;#123;a&amp;#125;`);
+扩展运算符12345678const a = [1,2,3];const b = [4,...a,6];console.log(b); //[4,1,2,3,6]const &amp;#123;c,d,...z&amp;#125; = &amp;#123;c:1,d:2,">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6220907859639535000',
+      author: '蛋蛋'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/07/23/ES新特性/"/>
+
+
+  <title> ES新特性 | Vector's Blog </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Vector's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ES新特性
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-07-23T22:11:40+08:00" content="2018-07-23">
+              2018-07-23
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/07/23/ES新特性/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/23/ES新特性/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2018/07/23/ES新特性/" class="leancloud_visitors" data-flag-title="ES新特性">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h1><h2 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> a = ~~(<span class="built_in">Math</span>.random())*<span class="number">10</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">`hello,<span class="subst">$&#123;a&#125;</span>`</span>);</div></pre></td></tr></table></figure>
+<h2 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="keyword">const</span> b = [<span class="number">4</span>,...a,<span class="number">6</span>];</div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">//[4,1,2,3,6]</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> &#123;c,d,...z&#125; = &#123;<span class="attr">c</span>:<span class="number">1</span>,<span class="attr">d</span>:<span class="number">2</span>,<span class="attr">e</span>:<span class="number">4</span>,<span class="attr">f</span>:<span class="number">6</span>&#125;;</div><div class="line"><span class="built_in">console</span>.log(c) <span class="comment">//1</span></div><div class="line"><span class="built_in">console</span>.log(d) <span class="comment">//2</span></div><div class="line"><span class="built_in">console</span>.log(z) <span class="comment">//&#123;e:4,f:6&#125;</span></div></pre></td></tr></table></figure>
+<h2 id="Array-find"><a href="#Array-find" class="headerlink" title="Array.find"></a>Array.find</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr = [</div><div class="line">    &#123;<span class="attr">name</span>:<span class="string">'aa'</span>,<span class="attr">value</span>:<span class="string">'1'</span>,<span class="attr">type</span>:<span class="string">'a'</span>&#125;,</div><div class="line">    &#123;<span class="attr">name</span>:<span class="string">'bb'</span>,<span class="attr">value</span>:<span class="string">'2'</span>,<span class="attr">type</span>:<span class="string">'b'</span>&#125;,</div><div class="line">    &#123;<span class="attr">name</span>:<span class="string">'cc'</span>,<span class="attr">value</span>:<span class="string">'3'</span>,<span class="attr">type</span>:<span class="string">'c'</span>&#125;,</div><div class="line">    &#123;<span class="attr">name</span>:<span class="string">'cc'</span>,<span class="attr">value</span>:<span class="string">'4'</span>,<span class="attr">type</span>:<span class="string">'d'</span>&#125;    </div><div class="line">]</div><div class="line"><span class="keyword">const</span> obj = arr.find(<span class="function"><span class="params">item</span> =&gt;</span> item.name === <span class="string">'aa'</span> &amp;&amp; item.value === <span class="string">'1'</span>);</div><div class="line"><span class="built_in">console</span>.log(obj) <span class="comment">// &#123;name:'aa',value:'1',type:'a'&#125;</span></div></pre></td></tr></table></figure>
+<h2 id="跨模块常量"><a href="#跨模块常量" class="headerlink" title="跨模块常量"></a>跨模块常量</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//a.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> A = <span class="number">1</span>;</div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> B = <span class="number">2</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//b.js</span></div><div class="line"><span class="keyword">import</span> ^ <span class="keyword">as</span> hello <span class="keyword">from</span> ‘./a.js’;</div><div class="line"><span class="built_in">console</span>.log(hello.A);<span class="comment">//1</span></div><div class="line"><span class="built_in">console</span>.log(hello.B);<span class="comment">//2</span></div></pre></td></tr></table></figure>
+<h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h2><p>如果解构不成功。变量的值就等于<code>undefined</code></p>
+<p>解构赋值允许指定默认值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> [ foo = <span class="literal">true</span> ] = [];</div><div class="line">foo <span class="comment">// true</span></div><div class="line">[ x,y = ‘b’ ] = [‘a’] <span class="comment">//x=’a’,y=’b’</span></div><div class="line">[ x,y = ‘b’] = [‘a’, <span class="literal">undefined</span>] <span class="comment">//x=’a’ ,y=’b’</span></div></pre></td></tr></table></figure></p>
+<p>注意：ES6内部使用严格相等运算符(===)判断一个位置是否有值。所以，如果一个数组成员不严格等于<code>undefined</code>，默认值是不会生效的。</p>
+<a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> [x = <span class="number">1</span>] = [<span class="literal">undefined</span>];</div><div class="line">x <span class="comment">// 1</span></div><div class="line"><span class="keyword">var</span> [x = <span class="number">1</span>] = [<span class="literal">null</span>];</div><div class="line">x <span class="comment">//null</span></div></pre></td></tr></table></figure>
+<p>如果将一个已经声明的变量用于解构赋值，必须非常小心<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 错误的写法</span></div><div class="line"><span class="keyword">var</span> x;</div><div class="line">&#123;x&#125; = &#123;<span class="attr">x</span>:<span class="number">1</span>&#125;;</div><div class="line"><span class="comment">// SyntaxError syntax error</span></div></pre></td></tr></table></figure></p>
+<p>上面的代码写法会报错，因为js引擎会将{x}理解成一个代码块，从而发生语法错误，只有不将大括号写在行首，避免js将其解释为代码块，才能解决这个问题。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 正确的写法</span></div><div class="line"><span class="keyword">var</span> x ;</div><div class="line">(&#123;x&#125;=&#123;<span class="attr">x</span>:<span class="number">1</span>&#125;);</div></pre></td></tr></table></figure></p>
+<h2 id="Array-prototype-includes"><a href="#Array-prototype-includes" class="headerlink" title="Array.prototype.includes"></a>Array.prototype.includes</h2><p>用于快速查找数组中是否包含某个元素。(包括NaN，所以和indexOf不一样)。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="literal">NaN</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.includes(<span class="number">3</span>)) <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(arr.indexOf(<span class="number">3</span>) &gt; <span class="number">0</span>) <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(arr.includes(<span class="literal">NaN</span>)) <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(arr.indexOf(<span class="literal">NaN</span>) &gt; <span class="number">0</span>) <span class="comment">// false</span></div></pre></td></tr></table></figure></p>
+<h2 id="指数函数的中缀形式"><a href="#指数函数的中缀形式" class="headerlink" title="指数函数的中缀形式"></a>指数函数的中缀形式</h2><p>可以使用 <code>**</code> 来替代 <code>Math.pow</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Math</span>.pow(<span class="number">7</span>,<span class="number">2</span>) <span class="comment">// 49</span></div><div class="line"><span class="number">7</span>**<span class="number">2</span> <span class="comment">// 49</span></div></pre></td></tr></table></figure></p>
+<h2 id="Object-values"><a href="#Object-values" class="headerlink" title="Object.values()"></a>Object.values()</h2><p><code>Object.values()</code> 函数和 <code>Object.keys()</code> 很相似，它返回一个对象中自己属性的所有值(通过原型链继承的不算)。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> objs = [&#123;<span class="attr">A</span>: <span class="number">3</span>&#125;,&#123;<span class="attr">B</span>: <span class="number">4</span>&#125;,&#123;<span class="attr">C</span>: <span class="number">5</span>&#125;];</div><div class="line"><span class="keyword">const</span> vals = <span class="built_in">Object</span>.keys(objs).map(<span class="function"><span class="params">key</span> =&gt;</span> objs[key]); <span class="comment">// [3,4,5]</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> values = <span class="built_in">Object</span>.values(objs); <span class="comment">// [3,4,5]</span></div></pre></td></tr></table></figure></p>
+<h2 id="Object-entries"><a href="#Object-entries" class="headerlink" title="Object.entries()"></a>Object.entries()</h2><p><code>Object.entries()</code> 和 <code>Object.keys</code> 相关，不过 <code>entries()</code> 函数会将key和value以数组的形式都返回。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.keys(objs).forEach(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`key: <span class="subst">$&#123;key&#125;</span>,value:<span class="subst">$&#123;objs[key]&#125;</span>`</span>)</div><div class="line">&#125;)</div><div class="line"><span class="keyword">for</span>(<span class="keyword">let</span> [key,value] <span class="keyword">of</span> <span class="built_in">Object</span>.entries(objs)) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`key: <span class="subst">$&#123;key&#125;</span>,value:<span class="subst">$&#123;value&#125;</span>`</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="字符串追加"><a href="#字符串追加" class="headerlink" title="字符串追加"></a>字符串追加</h2><p>提供了两个字符串追加的方法<code>String.prototype.padStart</code>和<code>String.prototype.padEnd</code>，方便我们将一个新的字符串追加到某个字符串的头尾。</p>
+<p><code>&#39;someString&#39;.padStart(numberOfCharcters [,stringForPadding]);</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="string">'5'</span>.padStart(<span class="number">10</span>) <span class="comment">// '          5'</span></div><div class="line"><span class="string">'5'</span>.padStart(<span class="number">10</span>, <span class="string">'*'</span>) <span class="comment">// '*********5'</span></div><div class="line"><span class="string">'5'</span>.padStart(<span class="number">10</span>, <span class="string">'*&amp;'</span>) <span class="comment">// '*&amp;*&amp;*&amp;*&amp;*5'</span></div><div class="line"><span class="string">'5'</span>.padEnd(<span class="number">10</span>) <span class="comment">// '5         '</span></div><div class="line"><span class="string">'5'</span>.padEnd(<span class="number">10</span>, <span class="string">'*'</span>) <span class="comment">//'5*************'</span></div><div class="line"><span class="string">'5'</span>.padEnd(<span class="number">10</span>, <span class="string">'*&amp;'</span>) <span class="comment">// '5*&amp;*&amp;*&amp;*&amp;*'</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//输出格式化</span></div><div class="line"><span class="keyword">const</span> cars = &#123;</div><div class="line">  <span class="string">'🚙BMW'</span>: <span class="string">'10'</span>,</div><div class="line">  <span class="string">'🚘Tesla'</span>: <span class="string">'5'</span>,</div><div class="line">  <span class="string">'🚖Lamborghini'</span>: <span class="string">'0'</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">Object</span>.entries(cars).map(<span class="function">(<span class="params">[name, count]</span>) =&gt;</span> &#123;</div><div class="line">  <span class="comment">//padEnd appends ' -' until the name becomes 20 characters</span></div><div class="line">  <span class="comment">//padStart prepends '0' until the count becomes 3 characters.</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;name.padEnd(<span class="number">20</span>, <span class="string">' -'</span>)&#125;</span> Count: <span class="subst">$&#123;count.padStart(<span class="number">3</span>, <span class="string">'0'</span>)&#125;</span>`</span>)</div><div class="line">&#125;);</div><div class="line"><span class="comment">//Prints..</span></div><div class="line"><span class="comment">// 🚙BMW - - - - - - -  Count: 010</span></div><div class="line"><span class="comment">// 🚘Tesla - - - - - -  Count: 005</span></div><div class="line"><span class="comment">// 🚖Lamborghini - - -  Count: 000</span></div></pre></td></tr></table></figure>
+<h2 id="Object-getOwnPropertyDescriptors"><a href="#Object-getOwnPropertyDescriptors" class="headerlink" title="Object.getOwnPropertyDescriptors"></a>Object.getOwnPropertyDescriptors</h2><p>该函数返回一个对象所有的属性，甚至包括<code>get/set</code>函数。</p>
+<p><em>ES2017</em>加入这个函数的主要动机在于方便将一个对象深度拷贝给另一个对象，同时可以将<code>getter/setter</code>拷贝。</p>
+<p>和<code>Object.assign</code>不同，<code>Object.assign</code>将一个对象除了<code>getter/setter</code>以外的都深度拷贝了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> Hello = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'xiaoming'</span>,</div><div class="line">    <span class="attr">age</span>: <span class="string">'25'</span>,</div><div class="line">    set nowAge(x) &#123;</div><div class="line">        <span class="keyword">this</span>.a = x;</div><div class="line">    &#125;,</div><div class="line">    get nowAge() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.a</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertyDescriptors(Hello,<span class="string">'nowAge'</span>));</div><div class="line"><span class="comment">/*</span></div><div class="line">&#123; name:</div><div class="line">   &#123; value: 'xiaoming',</div><div class="line">     writable: true,</div><div class="line">     enumerable: true,</div><div class="line">     configurable: true &#125;,</div><div class="line">  age:</div><div class="line">   &#123; value: '25',</div><div class="line">     writable: true,</div><div class="line">     enumerable: true,</div><div class="line">     configurable: true &#125;,</div><div class="line">  nowAge:</div><div class="line">   &#123; get: [Function: get nowAge],</div><div class="line">     set: [Function: set nowAge],</div><div class="line">     enumerable: true,</div><div class="line">     configurable: true &#125; &#125;</div><div class="line">*/</div><div class="line"><span class="keyword">const</span> copyHelloI = <span class="built_in">Object</span>.assign(&#123;&#125;,Hello);</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertyDescriptors(copyHelloI,<span class="string">'nowAge'</span>));</div><div class="line"><span class="comment">/*</span></div><div class="line">&#123; name:</div><div class="line">   &#123; value: 'xiaoming',</div><div class="line">     writable: true,</div><div class="line">     enumerable: true,</div><div class="line">     configurable: true &#125;,</div><div class="line">  age:</div><div class="line">   &#123; value: '25',</div><div class="line">     writable: true,</div><div class="line">     enumerable: true,</div><div class="line">     configurable: true &#125;,</div><div class="line">  nowAge:</div><div class="line">   &#123; value: undefined,</div><div class="line">     writable: true,</div><div class="line">     enumerable: true,</div><div class="line">     configurable: true &#125; &#125;</div><div class="line">*/</div><div class="line"><span class="keyword">const</span> copyHelloII = <span class="built_in">Object</span>.defineProperties(&#123;&#125;,<span class="built_in">Object</span>.getOwnPropertyDescriptors(Hello));</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertyDescriptors(copyHelloII,<span class="string">'nowAge'</span>));</div><div class="line"><span class="comment">/*</span></div><div class="line">&#123; name:</div><div class="line">   &#123; value: 'xiaoming',</div><div class="line">     writable: true,</div><div class="line">     enumerable: true,</div><div class="line">     configurable: true &#125;,</div><div class="line">  age:</div><div class="line">   &#123; value: '25',</div><div class="line">     writable: true,</div><div class="line">     enumerable: true,</div><div class="line">     configurable: true &#125;,</div><div class="line">  nowAge:</div><div class="line">   &#123; get: [Function: get nowAge],</div><div class="line">     set: [Function: set nowAge],</div><div class="line">     enumerable: true,</div><div class="line">     configurable: true &#125; &#125;</div><div class="line">*/</div></pre></td></tr></table></figure>
+<h2 id="Async-Await"><a href="#Async-Await" class="headerlink" title="Async/Await"></a>Async/Await</h2><p><code>async</code>关键字告诉JavaScript编译器对于标定的函数要区别对待。当编译器遇到<code>await</code>函数的时候会暂停。它会等到<code>await</code>标定的函数返回的<code>promise</code>。该<code>promise</code>要么得到结果、要么<code>reject</code>。</p>
+<p>在下面的例子中，<code>getAmount</code>函数调用<code>getUser</code>和<code>getBankBalance</code>两个异步函数。我们可以用<code>promise</code>来实现它，不过用<code>async await</code>更加简洁。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//ES2015 Promise</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getAmountI</span>(<span class="params">userId</span>) </span>&#123;</div><div class="line">  getUser(userId)</div><div class="line">    .then(getBankBlance)</div><div class="line">    .then(<span class="function"><span class="params">amount</span> =&gt;</span> &#123;</div><div class="line">      <span class="built_in">console</span>.log(amount)</div><div class="line">    &#125;)  </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//ES2017 Async/Await</span></div><div class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">getAmountII</span>(<span class="params">userId</span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> user = <span class="keyword">await</span> getUser(userId);</div><div class="line">  <span class="keyword">const</span> amount = <span class="keyword">await</span> getBankBlance(user);</div><div class="line">  <span class="built_in">console</span>.log(amount);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getUser</span>(<span class="params">userId</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</div><div class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      resolve(<span class="string">'join'</span>)</div><div class="line">    &#125;,<span class="number">1000</span>)</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line">getAmountI(<span class="string">'1'</span>); <span class="comment">//$1000</span></div><div class="line">getAmountII(<span class="string">'1'</span>); <span class="comment">//$1000</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getBankBlance</span>(<span class="params">user</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span> &#123;</div><div class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">if</span>(user === <span class="string">'join'</span>) &#123;</div><div class="line">        resolve(<span class="string">'$1000'</span>)</div><div class="line">      &#125;<span class="keyword">else</span> &#123;</div><div class="line">        reject(<span class="string">'unknown user'</span>)</div><div class="line">      &#125;</div><div class="line">    &#125;,<span class="number">1000</span>)</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="async函数返回Promise"><a href="#async函数返回Promise" class="headerlink" title="async函数返回Promise"></a>async函数返回Promise</h3><p>如果你想获取一个async函数的结果，你需要使用Promise的then语法。</p>
+<p>在下面的例子中，我们想用console.log来打印doubleAndAdd的结果，可以使用then语法，将console.log函数作为参数传入。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params">a,b</span>) </span>&#123;</div><div class="line">a = <span class="keyword">await</span> hey(a);</div><div class="line">b = <span class="keyword">await</span> hey(b);</div><div class="line"><span class="keyword">return</span> a + b;</div><div class="line">&#125;</div><div class="line"></div><div class="line">hello(<span class="number">1</span>,<span class="number">2</span>).then(<span class="built_in">console</span>.log) <span class="comment">//6</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hey</span>(<span class="params">param</span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</div><div class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    resolve(param * <span class="number">2</span>)</div><div class="line">    &#125;,<span class="number">1000</span>)</div><div class="line">&#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="并行处理"><a href="#并行处理" class="headerlink" title="并行处理"></a>并行处理</h3><p>在上面的例子中，我们显示地调用了await两次，因为每次都等待了1秒钟，因此总计两秒钟。现在，我们可以使用Promise.all函数来让他们并行处理。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params">a,b</span>) </span>&#123;</div><div class="line">    [a,b] = <span class="keyword">await</span> <span class="built_in">Promise</span>.all([hey(a),hey(b)]);</div><div class="line">    <span class="keyword">return</span> a + b;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>---------------<br/>Enjoy it ? Donate me ! <br/>欣赏此文？求鼓励，求支持！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.jpg" alt="林某亮 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="林某亮 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端开发/" rel="tag">#前端开发</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/23/Command-Line-Interface/" rel="next" title="Command Line Interface">
+                <i class="fa fa-chevron-left"></i> Command Line Interface
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/23/Jest/" rel="prev" title="Jest">
+                Jest <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2018/07/23/ES新特性/"
+           data-title="ES新特性" data-url="http://yoursite.com/2018/07/23/ES新特性/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="林某亮" />
+          <p class="site-author-name" itemprop="name">林某亮</p>
+          <p class="site-description motion-element" itemprop="description">满地都是六便士<br/>他却抬头看见了月亮</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/vectorlin" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/xianliangyun" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ES6"><span class="nav-text">ES6</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模板字符串"><span class="nav-text">模板字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展运算符"><span class="nav-text">扩展运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-find"><span class="nav-text">Array.find</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跨模块常量"><span class="nav-text">跨模块常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解构赋值"><span class="nav-text">解构赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-prototype-includes"><span class="nav-text">Array.prototype.includes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指数函数的中缀形式"><span class="nav-text">指数函数的中缀形式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-values"><span class="nav-text">Object.values()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-entries"><span class="nav-text">Object.entries()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串追加"><span class="nav-text">字符串追加</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-getOwnPropertyDescriptors"><span class="nav-text">Object.getOwnPropertyDescriptors</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Async-Await"><span class="nav-text">Async/Await</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#async函数返回Promise"><span class="nav-text">async函数返回Promise</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并行处理"><span class="nav-text">并行处理</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">林某亮</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"vectorzero"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("oW3tic54jlO5aMSXkvrvsJ9Q-gzGzoHsz", "PcycRoetSenh8YPIwlJ896ts");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>
