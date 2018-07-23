@@ -239,6 +239,123 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/08/code-clip/" itemprop="url">
+                  code clip
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-08T22:30:04+08:00" content="2016-12-08">
+              2016-12-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/08/code-clip/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/08/code-clip/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/08/code-clip/" class="leancloud_visitors" data-flag-title="code clip">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Code-Clip"><a href="#Code-Clip" class="headerlink" title="Code Clip"></a>Code Clip</h2><h3 id="根据屏幕大小更改样式"><a href="#根据屏幕大小更改样式" class="headerlink" title="根据屏幕大小更改样式"></a>根据屏幕大小更改样式</h3><p><strong>jQuery</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.screen.width &lt; <span class="number">1920</span>||$(<span class="built_in">window</span>).width()&lt;<span class="number">1920</span>) &#123;</div><div class="line">            $(<span class="built_in">document</span>.body).css(&#123;</div><div class="line">                <span class="string">"overflow-y"</span>: <span class="string">"auto"</span></div><div class="line">            &#125;);</div><div class="line">        &#125;;</div></pre></td></tr></table></figure></p>
+<h3 id="根据屏幕大小以及浏览器更改样式"><a href="#根据屏幕大小以及浏览器更改样式" class="headerlink" title="根据屏幕大小以及浏览器更改样式"></a>根据屏幕大小以及浏览器更改样式</h3><p><strong>html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--[if IE 8]&gt;</span></div><div class="line">&lt;script&gt;</div><div class="line">        $(document).ready(function () &#123;</div><div class="line">            window.onresize = function () &#123; location = location &#125;;</div><div class="line">            if ($(window).width() &lt; 1400) &#123;</div><div class="line">                $(".spanFont").css("font-size", "16px");</div><div class="line">            &#125; else &#123;&#125;</div><div class="line">        &#125;)</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="回车登录"><a href="#回车登录" class="headerlink" title="回车登录"></a>回车登录</h3><p><strong>html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onkeydown</span>=<span class="string">"keyLogin(et)"</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>jQuery</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">keyLogin</span>(<span class="params">et</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span> (et.keyCode==<span class="number">13</span>||et.which==<span class="number">13</span>)</div><div class="line">            <span class="built_in">document</span>.getElementById(<span class="string">"login-btn"</span>).click();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="禁止右键"><a href="#禁止右键" class="headerlink" title="禁止右键"></a>禁止右键</h3><p><strong>jQuery</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line">    $(<span class="built_in">document</span>).bind(<span class="string">"contextmenu"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123; </div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>; </div><div class="line">    &#125;); </div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h3 id="页面样式切换"><a href="#页面样式切换" class="headerlink" title="页面样式切换"></a>页面样式切换</h3><p><strong>jQuery</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </div><div class="line">    $(<span class="string">"a.Styleswitcher"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </div><div class="line">        $(<span class="string">'link[rel=stylesheet]'</span>).attr(<span class="string">'href'</span> , $(<span class="keyword">this</span>).attr(<span class="string">'rel'</span>));</div><div class="line">    &#125;); </div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p><strong>html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">stylesheet</span> <span class="attr">type</span>=<span class="string">text/css</span> <span class="attr">href</span>=<span class="string">"default.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"Styleswitcher"</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">rel</span>=<span class="string">"default.css"</span>&gt;</span>Default Theme<span class="tag">&lt;/<span class="name">a</span>&gt;</span> </div><div class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"Styleswitcher"</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">rel</span>=<span class="string">"red.css"</span>&gt;</span>Red Theme<span class="tag">&lt;/<span class="name">a</span>&gt;</span> </div><div class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"Styleswitcher"</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">rel</span>=<span class="string">"blue.css"</span>&gt;</span>Blue Theme<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/08/hack/" itemprop="url">
                   hack
                 </a>
@@ -445,117 +562,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/08/Javascript/" itemprop="url">
-                  Javascript
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-08T20:58:21+08:00" content="2016-12-08">
-              2016-12-08
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/08/Javascript/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/08/Javascript/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/08/Javascript/" class="leancloud_visitors" data-flag-title="Javascript">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="js实现数字数组升序和降序排列"><a href="#js实现数字数组升序和降序排列" class="headerlink" title="js实现数字数组升序和降序排列"></a>js实现数字数组升序和降序排列</h3><p><strong>升序</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> theArray=[<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">15</span>,<span class="number">8</span>,<span class="number">12</span>,<span class="number">11</span>,<span class="number">7</span>];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">des</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> a-b;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(theArray.sort(des));</div></pre></td></tr></table></figure></p>
-<p><strong>降序</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> theArray=[<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">15</span>,<span class="number">8</span>,<span class="number">12</span>,<span class="number">11</span>,<span class="number">7</span>];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">des</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> b-a;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(theArray.sort(des));</div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -601,7 +607,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -668,7 +674,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
