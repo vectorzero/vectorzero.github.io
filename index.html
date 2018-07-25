@@ -86,12 +86,13 @@
 
 <meta name="description" content="满地都是六便士他却抬头看见了月亮">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Vector's Blog">
+<meta property="og:title" content="Vector&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Vector's Blog">
+<meta property="og:site_name" content="Vector&#39;s Blog">
 <meta property="og:description" content="满地都是六便士他却抬头看见了月亮">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vector's Blog">
+<meta name="twitter:title" content="Vector&#39;s Blog">
 <meta name="twitter:description" content="满地都是六便士他却抬头看见了月亮">
 
 
@@ -239,8 +240,8 @@
             
               
                 
-                <a class="post-title-link" href="/2018/07/23/Javascript/" itemprop="url">
-                  Javascript
+                <a class="post-title-link" href="/2018/07/25/Javascript编码规范/" itemprop="url">
+                  Javascript编码规范
                 </a>
               
             
@@ -253,8 +254,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-07-23T22:45:21+08:00" content="2018-07-23">
-              2018-07-23
+            <time itemprop="dateCreated" datetime="2018-07-25T11:36:06+08:00" content="2018-07-25">
+              2018-07-25
             </time>
           </span>
 
@@ -264,8 +265,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2018/07/23/Javascript/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/23/Javascript/" itemprop="commentsCount"></span>
+                <a href="/2018/07/25/Javascript编码规范/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/25/Javascript编码规范/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -275,7 +276,7 @@
 
           
           
-             <span id="/2018/07/23/Javascript/" class="leancloud_visitors" data-flag-title="Javascript">
+             <span id="/2018/07/25/Javascript编码规范/" class="leancloud_visitors" data-flag-title="Javascript编码规范">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -298,14 +299,45 @@
 
       
         
-          <h2 id="短路表达式"><a href="#短路表达式" class="headerlink" title="短路表达式"></a>短路表达式</h2><p>作为”&amp;&amp;”和”||”操作符的操作数表达式，这些表达式在进行求值时，只要最终的结果已经可以确定是真或假，求值过程便告终止，这称之为短路求值。这是这两个操作符的一个重要属性。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ||短路表达式</span></div><div class="line"><span class="keyword">var</span> foo = a || b;</div><div class="line"><span class="comment">// 相当于</span></div><div class="line"><span class="keyword">if</span>(a)&#123;</div><div class="line">    foo = a;</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    foo = b;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// &amp;&amp;短路表达式</span></div><div class="line"><span class="keyword">var</span> bar = a &amp;&amp; b;</div><div class="line"><span class="comment">// 相当于</span></div><div class="line"><span class="keyword">if</span>(a)&#123;</div><div class="line">    bar = b;</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    bar = a;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>1、在 Javascript 的逻辑运算中，0、””、null、false、undefined、NaN 都会判定为 false ，而其他都为 true ；</p>
-<p>2、因为 Javascript 的内置弱类型域 (weak-typing domain)，所以对严格的输入验证这一点不太在意，即便使用 &amp;&amp; 或者 || 运算符的运算数不是布尔值，仍然可以将它看作布尔运算。虽然如此，还是建议如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(foo)&#123; ... &#125;     <span class="comment">//不够严谨</span></div><div class="line"><span class="keyword">if</span>(!!foo)&#123; ... &#125;   <span class="comment">//更为严谨，!!可将其他类型的值转换为boolean类型</span></div></pre></td></tr></table></figure>
-<h2 id="十进制指数"><a href="#十进制指数" class="headerlink" title="十进制指数"></a>十进制指数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="number">1e2</span>) <span class="comment">//100</span></div></pre></td></tr></table></figure>
+          <h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><ul>
+<li><p>1.1<strong>基本类型</strong>: 直接存取基本类型。</p>
+<ul>
+<li><code>字符串</code></li>
+<li><code>数值</code></li>
+<li><code>布尔类型</code></li>
+<li><code>null</code></li>
+<li><code>undefined</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> bar = foo;</span><br><span class="line"></span><br><span class="line">bar = <span class="number">9</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(foo, bar); <span class="comment">// =&gt; 1, 9</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.2 <strong>复杂类型</strong>: 通过引用的方式存取复杂类型。</p>
+<ul>
+<li><code>对象</code></li>
+<li><code>数组</code></li>
+<li><code>函数</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"><span class="keyword">const</span> bar = foo;</span><br><span class="line"></span><br><span class="line">bar[<span class="number">0</span>] = <span class="number">9</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(foo[<span class="number">0</span>], bar[<span class="number">0</span>]); <span class="comment">// =&gt; 9, 9</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ul>
+<li><p>2.1 对所有的引用使用 <code>const</code> ；不要使用 <code>var</code>。</p>
+<blockquote>
+<p>为什么？这能确保你无法对引用重新赋值，也不会导致出现 bug 或难以理解。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">const</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> b = <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2.2 如果你一定需要可变动的引用，使用 <code>let</code> 代替 <code>var</code>。</p>
+<blockquote>
+<p>为什么？因为  <code>let</code> 是块级作用域，而 <code>var</code> 是函数作用域。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">var</span> count = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  count += <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good, use the let.</span></span><br><span class="line"><span class="keyword">let</span> count = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  count += <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2.3 注意 <code>let</code> 和 <code>const</code> 都是块级作用域。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// const 和 let 只存在于它们被定义的区块内。</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">const</span> b = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// ReferenceError</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// ReferenceError</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2018/07/23/Javascript/#more" rel="contents">
+            <a class="btn" href="/2018/07/25/Javascript编码规范/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -356,8 +388,8 @@
             
               
                 
-                <a class="post-title-link" href="/2018/07/23/ESLint/" itemprop="url">
-                  ESLint
+                <a class="post-title-link" href="/2018/07/25/Less编码规范/" itemprop="url">
+                  Less编码规范
                 </a>
               
             
@@ -370,8 +402,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-07-23T22:14:09+08:00" content="2018-07-23">
-              2018-07-23
+            <time itemprop="dateCreated" datetime="2018-07-25T11:35:03+08:00" content="2018-07-25">
+              2018-07-25
             </time>
           </span>
 
@@ -381,8 +413,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2018/07/23/ESLint/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/23/ESLint/" itemprop="commentsCount"></span>
+                <a href="/2018/07/25/Less编码规范/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/25/Less编码规范/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -392,7 +424,7 @@
 
           
           
-             <span id="/2018/07/23/ESLint/" class="leancloud_visitors" data-flag-title="ESLint">
+             <span id="/2018/07/25/Less编码规范/" class="leancloud_visitors" data-flag-title="Less编码规范">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -415,11 +447,24 @@
 
       
         
-          <h3 id="安装-ESLint"><a href="#安装-ESLint" class="headerlink" title="安装 ESLint"></a>安装 <em>ESLint</em></h3><p><code>npm i -g eslint</code></p>
-<h3 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h3><p>配置规则可查看<a href="http://eslint.cn/docs/user-guide/configuring">官方文档</a></p>
-<p>在根目录下创建 <strong>.eslintrc.js</strong> ，简单配置一下：</p>
+          <h2 id="代码组织"><a href="#代码组织" class="headerlink" title="代码组织"></a>代码组织</h2><p>代码按如下形式按顺序组织：</p>
+<ol>
+<li><code>@import</code></li>
+<li>变量声明</li>
+<li>样式声明</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// good</span><br><span class="line">@<span class="keyword">import</span> <span class="string">"est/all.less"</span>;</span><br><span class="line"></span><br><span class="line">@default-text-color: #333;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.page</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">960px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="import-语句"><a href="#import-语句" class="headerlink" title="@import 语句"></a><code>@import</code> 语句</h2><p><code>@import</code> 语句引用的文件必须写在一对引号内，<code>.less</code> 后缀不得省略。引号使用 <code>&#39;</code> 和 <code>&quot;</code> 均可，但在同一项目内必须统一。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// bad</span><br><span class="line">@<span class="keyword">import</span> <span class="string">'est/all'</span>;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">"my/mixins.less"</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// good</span><br><span class="line">@<span class="keyword">import</span> <span class="string">"est/all.less"</span>;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">"my/mixins.less"</span>;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h2><h3 id="混入（Mixin）"><a href="#混入（Mixin）" class="headerlink" title="混入（Mixin）"></a>混入（Mixin）</h3><p>Mixin 和后面的空格之间不得包含空格。在给 mixin 传递参数时，在参数分隔符（<code>,</code> / <code>;</code>）后必须保留一个空格：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// bad</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    .size(30px,20px);</span><br><span class="line">    <span class="selector-class">.clearfix</span> ();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// good</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    .size(30px, 20px);</span><br><span class="line">    <span class="selector-class">.clearfix</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2018/07/23/ESLint/#more" rel="contents">
+            <a class="btn" href="/2018/07/25/Less编码规范/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -470,8 +515,8 @@
             
               
                 
-                <a class="post-title-link" href="/2018/07/23/Jest/" itemprop="url">
-                  Jest
+                <a class="post-title-link" href="/2018/07/25/CSS编码规范/" itemprop="url">
+                  CSS编码规范
                 </a>
               
             
@@ -484,8 +529,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-07-23T22:13:42+08:00" content="2018-07-23">
-              2018-07-23
+            <time itemprop="dateCreated" datetime="2018-07-25T11:32:25+08:00" content="2018-07-25">
+              2018-07-25
             </time>
           </span>
 
@@ -495,8 +540,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2018/07/23/Jest/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/23/Jest/" itemprop="commentsCount"></span>
+                <a href="/2018/07/25/CSS编码规范/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/25/CSS编码规范/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -506,7 +551,7 @@
 
           
           
-             <span id="/2018/07/23/Jest/" class="leancloud_visitors" data-flag-title="Jest">
+             <span id="/2018/07/25/CSS编码规范/" class="leancloud_visitors" data-flag-title="CSS编码规范">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -529,11 +574,19 @@
 
       
         
-          <h3 id="安装Jest"><a href="#安装Jest" class="headerlink" title="安装Jest"></a>安装Jest</h3><p><code>npm install --save-dev jest</code></p>
-<h3 id="创建文件︰"><a href="#创建文件︰" class="headerlink" title="创建文件︰"></a>创建文件︰</h3><p><em>sum.js</em><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> a + b;</div><div class="line">&#125;</div><div class="line"><span class="built_in">module</span>.exports = sum;</div></pre></td></tr></table></figure></p>
-<p><em>sum.test.js</em><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> sum = <span class="built_in">require</span>(<span class="string">'./sum'</span>);</div><div class="line"></div><div class="line">test(<span class="string">'adds 1 + 2 to equal 3'</span>, () =&gt; &#123;</div><div class="line">  expect(sum(<span class="number">1</span>, <span class="number">2</span>)).toBe(<span class="number">3</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+          <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h2><p>CSS 作为网页样式的描述语言，在百度一直有着广泛的应用。本文档的目标是使 CSS 代码风格保持一致，容易被理解和被维护。</p>
+<p>虽然本文档是针对 CSS 设计的，但是在使用各种 CSS 的预编译器(如 less、sass、stylus 等)时，适用的部分也应尽量遵循本文档的约定。</p>
+<h2 id="2-代码风格"><a href="#2-代码风格" class="headerlink" title="2 代码风格"></a>2 代码风格</h2><h3 id="2-1-空格"><a href="#2-1-空格" class="headerlink" title="2.1 空格"></a>2.1 空格</h3><h4 id="强制-选择器-与-之间必须包含空格。"><a href="#强制-选择器-与-之间必须包含空格。" class="headerlink" title="[强制] 选择器 与 { 之间必须包含空格。"></a>[强制] <code>选择器</code> 与 <code>{</code> 之间必须包含空格。</h4><p>示例：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.selector</span> &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="强制-属性名-与之后的-之间不允许包含空格，-与-属性值-之间必须包含空格。"><a href="#强制-属性名-与之后的-之间不允许包含空格，-与-属性值-之间必须包含空格。" class="headerlink" title="[强制] 属性名 与之后的 : 之间不允许包含空格， : 与 属性值 之间必须包含空格。"></a>[强制] <code>属性名</code> 与之后的 <code>:</code> 之间不允许包含空格， <code>:</code> 与 <code>属性值</code> 之间必须包含空格。</h4><p>示例：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">margin</span>: 0;</span><br></pre></td></tr></table></figure>
+<h4 id="强制-列表型属性值-书写在单行时，-后必须跟一个空格。"><a href="#强制-列表型属性值-书写在单行时，-后必须跟一个空格。" class="headerlink" title="[强制] 列表型属性值 书写在单行时，, 后必须跟一个空格。"></a>[强制] <code>列表型属性值</code> 书写在单行时，<code>,</code> 后必须跟一个空格。</h4><p>示例：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">font-family</span>: <span class="selector-tag">Arial</span>, <span class="selector-tag">sans-serif</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="2-4-行长度"><a href="#2-4-行长度" class="headerlink" title="2.4 行长度"></a>2.4 行长度</h3><h4 id="强制-每行不得超过-120-个字符，除非单行不可分割。"><a href="#强制-每行不得超过-120-个字符，除非单行不可分割。" class="headerlink" title="[强制] 每行不得超过 120 个字符，除非单行不可分割。"></a>[强制] 每行不得超过 <code>120</code> 个字符，除非单行不可分割。</h4><p>解释：</p>
+<p>常见不可分割的场景为URL超长。</p>
+<h4 id="建议-对于超长的样式，在样式值的-空格-处或-后换行，建议按逻辑分组。"><a href="#建议-对于超长的样式，在样式值的-空格-处或-后换行，建议按逻辑分组。" class="headerlink" title="[建议] 对于超长的样式，在样式值的 空格 处或 , 后换行，建议按逻辑分组。"></a>[建议] 对于超长的样式，在样式值的 <code>空格</code> 处或 <code>,</code> 后换行，建议按逻辑分组。</h4>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2018/07/23/Jest/#more" rel="contents">
+            <a class="btn" href="/2018/07/25/CSS编码规范/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -567,7 +620,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -608,7 +661,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

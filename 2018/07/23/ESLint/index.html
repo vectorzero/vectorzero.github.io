@@ -84,22 +84,18 @@
 
 
 
-<meta name="description" content="安装 ESLintnpm i -g eslint
-创建配置文件配置规则可查看官方文档
-在根目录下创建 .eslintrc.js ，简单配置一下：">
+<meta name="description" content="安装 ESLintnpm i -g eslint 创建配置文件配置规则可查看官方文档 在根目录下创建 .eslintrc.js ，简单配置一下：">
+<meta name="keywords" content="前端开发">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ESLint">
 <meta property="og:url" content="http://yoursite.com/2018/07/23/ESLint/index.html">
-<meta property="og:site_name" content="Vector's Blog">
-<meta property="og:description" content="安装 ESLintnpm i -g eslint
-创建配置文件配置规则可查看官方文档
-在根目录下创建 .eslintrc.js ，简单配置一下：">
-<meta property="og:updated_time" content="2018-07-23T14:45:30.421Z">
+<meta property="og:site_name" content="Vector&#39;s Blog">
+<meta property="og:description" content="安装 ESLintnpm i -g eslint 创建配置文件配置规则可查看官方文档 在根目录下创建 .eslintrc.js ，简单配置一下：">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-24T01:06:09.708Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ESLint">
-<meta name="twitter:description" content="安装 ESLintnpm i -g eslint
-创建配置文件配置规则可查看官方文档
-在根目录下创建 .eslintrc.js ，简单配置一下：">
+<meta name="twitter:description" content="安装 ESLintnpm i -g eslint 创建配置文件配置规则可查看官方文档 在根目录下创建 .eslintrc.js ，简单配置一下：">
 
 
 
@@ -300,10 +296,10 @@
 
       
         <h3 id="安装-ESLint"><a href="#安装-ESLint" class="headerlink" title="安装 ESLint"></a>安装 <em>ESLint</em></h3><p><code>npm i -g eslint</code></p>
-<h3 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h3><p>配置规则可查看<a href="http://eslint.cn/docs/user-guide/configuring" target="_blank" rel="external">官方文档</a></p>
+<h3 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h3><p>配置规则可查看<a href="http://eslint.cn/docs/user-guide/configuring" target="_blank" rel="noopener">官方文档</a></p>
 <p>在根目录下创建 <strong>.eslintrc.js</strong> ，简单配置一下：</p>
 <a id="more"></a>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="attr">extends</span>: <span class="string">'eslint:recommended'</span>,</div><div class="line">    <span class="attr">env</span>: &#123;</div><div class="line">        <span class="attr">browser</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">node</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">commonjs</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">es6</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">mocha</span>: <span class="literal">true</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">root</span>: <span class="literal">true</span>,</div><div class="line">    <span class="attr">rules</span>: &#123;</div><div class="line">        <span class="string">'no-console'</span>: <span class="string">'off'</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    extends: <span class="string">'eslint:recommended'</span>,</span><br><span class="line">    env: &#123;</span><br><span class="line">        browser: <span class="literal">true</span>,</span><br><span class="line">        node: <span class="literal">true</span>,</span><br><span class="line">        commonjs: <span class="literal">true</span>,</span><br><span class="line">        es6: <span class="literal">true</span>,</span><br><span class="line">        mocha: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    root: <span class="literal">true</span>,</span><br><span class="line">    rules: &#123;</span><br><span class="line">        <span class="string">'no-console'</span>: <span class="string">'off'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="验证代码质量与规范"><a href="#验证代码质量与规范" class="headerlink" title="验证代码质量与规范"></a>验证代码质量与规范</h3><p>创建一个 <strong>app.js</strong> 文件，输入一些内容，然后通过以下命令执行验证：</p>
 <p><code>eslint app.js</code></p>
 <p> 如果你的代码不符合要求，那么控制台并会提示你哪些地方存在问题。</p>
@@ -441,7 +437,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
