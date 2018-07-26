@@ -1,0 +1,810 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="前端开发," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="下载nodejs （win64位，版本最好为6.x以上） 下载node.js 安装nodejs  （Win+R输入cmd打开命令行窗口） 安装淘宝镜像 cnpmnpm install -g cnpm --registry=https://registry.npm.taobao.org 全局安装 vue-cli 2.x关闭cmd窗口，到放项目的目录下shift+右键打开命令行窗口 cnpm i -g">
+<meta name="keywords" content="前端开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始一个Vue项目">
+<meta property="og:url" content="http://yoursite.com/2018/07/26/从零开始一个Vue项目/index.html">
+<meta property="og:site_name" content="Vector&#39;s Blog">
+<meta property="og:description" content="下载nodejs （win64位，版本最好为6.x以上） 下载node.js 安装nodejs  （Win+R输入cmd打开命令行窗口） 安装淘宝镜像 cnpmnpm install -g cnpm --registry=https://registry.npm.taobao.org 全局安装 vue-cli 2.x关闭cmd窗口，到放项目的目录下shift+右键打开命令行窗口 cnpm i -g">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-26T00:56:09.970Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="从零开始一个Vue项目">
+<meta name="twitter:description" content="下载nodejs （win64位，版本最好为6.x以上） 下载node.js 安装nodejs  （Win+R输入cmd打开命令行窗口） 安装淘宝镜像 cnpmnpm install -g cnpm --registry=https://registry.npm.taobao.org 全局安装 vue-cli 2.x关闭cmd窗口，到放项目的目录下shift+右键打开命令行窗口 cnpm i -g">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6220907859639535000',
+      author: '蛋蛋'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/07/26/从零开始一个Vue项目/"/>
+
+
+  <title> 从零开始一个Vue项目 | Vector's Blog </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Vector's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                从零开始一个Vue项目
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-07-26T08:55:34+08:00" content="2018-07-26">
+              2018-07-26
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/07/26/从零开始一个Vue项目/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/26/从零开始一个Vue项目/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2018/07/26/从零开始一个Vue项目/" class="leancloud_visitors" data-flag-title="从零开始一个Vue项目">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="下载nodejs-（win64位，版本最好为6-x以上）"><a href="#下载nodejs-（win64位，版本最好为6-x以上）" class="headerlink" title="下载nodejs （win64位，版本最好为6.x以上）"></a>下载nodejs （win64位，版本最好为6.x以上）</h2><ul>
+<li><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">下载node.js</a></li>
+<li>安装nodejs</li>
+</ul>
+<p><strong>（Win+R输入cmd打开命令行窗口）</strong></p>
+<h2 id="安装淘宝镜像-cnpm"><a href="#安装淘宝镜像-cnpm" class="headerlink" title="安装淘宝镜像 cnpm"></a>安装淘宝镜像 cnpm</h2><p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+<h2 id="全局安装-vue-cli-2-x"><a href="#全局安装-vue-cli-2-x" class="headerlink" title="全局安装 vue-cli 2.x"></a>全局安装 vue-cli 2.x</h2><p>关闭cmd窗口，到放项目的目录下shift+右键打开命令行窗口</p>
+<p><code>cnpm i -g @vue/cli-init</code></p>
+<h2 id="创建一个基于-webpack-模板的新项目"><a href="#创建一个基于-webpack-模板的新项目" class="headerlink" title="创建一个基于 webpack 模板的新项目"></a>创建一个基于 webpack 模板的新项目</h2><p><code>vue init webpack vuecli</code></p>
+<p><strong>（一直回车，只有vue-router选择y，其他均选择n）</strong></p>
+<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><p><code>cd vuecli</code></p>
+<p><code>cnpm i</code></p>
+<h2 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h2><p><code>npm run dev</code></p>
+<h2 id="安装elementUI"><a href="#安装elementUI" class="headerlink" title="安装elementUI"></a>安装elementUI</h2><p><code>cnpm i element-ui --save-dev</code></p>
+<h2 id="引入elementUI"><a href="#引入elementUI" class="headerlink" title="引入elementUI"></a>引入elementUI</h2><p>在<strong>main.js</strong>中添入以下代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">'element-ui'</span> </span><br><span class="line"><span class="keyword">import</span> <span class="string">'element-ui/lib/theme-chalk/index.css'</span></span><br><span class="line">Vue.use(ElementUI, &#123; <span class="attr">size</span>: <span class="string">'small'</span> &#125;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="安装axios"><a href="#安装axios" class="headerlink" title="安装axios"></a>安装axios</h2><p><code>cnpm i axios --save-dev</code></p>
+<h2 id="引入axios"><a href="#引入axios" class="headerlink" title="引入axios"></a>引入axios</h2><p>在 <strong>main.js</strong> 文件中添加以下代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span></span><br><span class="line">Vue.prototype.$http = axios</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h4 id="使用代码："><a href="#使用代码：" class="headerlink" title="使用代码："></a>使用代码：</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$http(&#123;<span class="attr">method</span>:<span class="string">'get'</span>,<span class="attr">url</span>:<span class="string">'http://localhost:8080/static/data.json'</span>,<span class="attr">param</span>:&#123;&#125;&#125;)</span><br><span class="line">  .then(<span class="function">(<span class="params">response</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response.data)</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function">(<span class="params">error</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="安装vuex"><a href="#安装vuex" class="headerlink" title="安装vuex"></a>安装vuex</h2><p><code>cnpm i vuex --save-dev</code></p>
+<h2 id="引入vuex"><a href="#引入vuex" class="headerlink" title="引入vuex"></a>引入vuex</h2><p>在<strong>mian.js</strong>中添加以下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line">Vue.use(Vuex)</span><br></pre></td></tr></table></figure></p>
+<h4 id="使用代码：-1"><a href="#使用代码：-1" class="headerlink" title="使用代码："></a>使用代码：</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  <span class="comment">// 存储状态值</span></span><br><span class="line">  state: &#123;</span><br><span class="line">    count:<span class="number">1</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 状态值的改变方法,操作状态值</span></span><br><span class="line">  <span class="comment">// 提交mutations是更改Vuex状态的唯一方法</span></span><br><span class="line">  mutations: &#123;</span><br><span class="line">    increment(state)&#123;</span><br><span class="line">      state.count++</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 在store中定义getters（可以认为是store的计算属性）。Getters接收state作为其第一个函数</span></span><br><span class="line">  getters: &#123;</span><br><span class="line">    </span><br><span class="line">  &#125;,</span><br><span class="line">  actions: &#123; </span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  router,</span><br><span class="line">  store,</span><br><span class="line">  template: <span class="string">'&lt;App/&gt;'</span>,</span><br><span class="line">  components: &#123; App &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="安装less"><a href="#安装less" class="headerlink" title="安装less"></a>安装less</h2><p><code>cnpm i less less-loader --save-dev</code></p>
+<h2 id="引入less"><a href="#引入less" class="headerlink" title="引入less"></a>引入less</h2><p>在<strong>webpack.base.conf.js</strong>里面添加以下代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">        &#123;</span><br><span class="line">          test: <span class="regexp">/\.less$/</span>,</span><br><span class="line">          loader: <span class="string">"style-loader!css-loader!less-loader"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="使用代码：-2"><a href="#使用代码：-2" class="headerlink" title="使用代码："></a>使用代码：</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">'less'</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.nav</span> &#123;</span></span><br><span class="line"><span class="undefined">      a &#123;</span></span><br><span class="line"><span class="undefined">        text-decoration: none;</span></span><br><span class="line"><span class="undefined">        margin: auto 20px;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="在vue里面使用jsx语法："><a href="#在vue里面使用jsx语法：" class="headerlink" title="在vue里面使用jsx语法："></a>在vue里面使用jsx语法：</h2><p><code>cnpm i babel-helper-vue-jsx-merge-props --save-dev</code></p>
+<p><code>cnpm i babel-plugin-syntax-jsx --save-dev</code></p>
+<p><code>cnpm i babel-plugin-transform-vue-jsx --save-dev</code></p>
+<p>在<strong>babelrc</strong>文件里面添加/修改以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;presets&quot;: [</span><br><span class="line">    [&quot;env&quot;, &#123;</span><br><span class="line">      &quot;modules&quot;: false,</span><br><span class="line">      &quot;targets&quot;: &#123;</span><br><span class="line">        &quot;browsers&quot;: [&quot;&gt; 1%&quot;, &quot;last 2 versions&quot;, &quot;not ie &lt;= 8&quot;]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;],</span><br><span class="line">    &quot;stage-3&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;plugins&quot;: [</span><br><span class="line">    &quot;transform-vue-jsx&quot;,</span><br><span class="line">    &quot;transform-runtime&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="以下可以不用安装"><a href="#以下可以不用安装" class="headerlink" title="以下可以不用安装"></a>以下可以不用安装</h1><h2 id="安装-font-awesome"><a href="#安装-font-awesome" class="headerlink" title="安装 font-awesome"></a>安装 font-awesome</h2><p><code>cnpm i font-awesome --save-dev</code></p>
+<h2 id="引入font-awesome"><a href="#引入font-awesome" class="headerlink" title="引入font-awesome"></a>引入font-awesome</h2><p>在<strong>main.js</strong>里面添加以下代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'font-awesome/css/font-awesome.css'</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="使用代码：-3"><a href="#使用代码：-3" class="headerlink" title="使用代码："></a>使用代码：</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-fw fa-weibo"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="安装vux"><a href="#安装vux" class="headerlink" title="安装vux"></a>安装vux</h2><p><code>cnpm i vux --save-dev</code><br><code>cnpm i vux-loader</code></p>
+<h2 id="引入vux"><a href="#引入vux" class="headerlink" title="引入vux"></a>引入vux</h2><p>在<strong>webpack.base.conf.js</strong>里面添加/修改以下代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> vuxLoader = <span class="built_in">require</span>(<span class="string">'vux-loader'</span>)</span><br><span class="line"><span class="comment">//module.exports = &#123;</span></span><br><span class="line"><span class="keyword">let</span> webpackConfig = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    <span class="comment">//....</span></span><br><span class="line">  &#125;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports = vuxLoader.merge(webpackConfig, &#123;</span><br><span class="line">    options: &#123;&#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">'vux-ui'</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>在<strong>index.html</strong>里面添加以下代码<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1,user-scalable=0"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="使用代码：-4"><a href="#使用代码：-4" class="headerlink" title="使用代码："></a>使用代码：</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">group</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">cell</span> <span class="attr">title</span>=<span class="string">"title"</span> <span class="attr">value</span>=<span class="string">"value"</span>&gt;</span><span class="tag">&lt;/<span class="name">cell</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">group</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Group, Cell &#125; <span class="keyword">from</span> <span class="string">'vux'</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  components: &#123;</span><br><span class="line">    Group,</span><br><span class="line">    Cell</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="引入amap"><a href="#引入amap" class="headerlink" title="引入amap"></a>引入amap</h2><p>在<strong>mian.js</strong>中添加以下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> AMap <span class="keyword">from</span> <span class="string">'vue-amap'</span></span><br><span class="line">Vue.use(AMap)</span><br><span class="line"></span><br><span class="line">AMap.initAMapApiLoader(&#123;</span><br><span class="line">  <span class="comment">// 申请的高德key</span></span><br><span class="line">  key: <span class="string">'YOUR_KEY'</span>,</span><br><span class="line">  <span class="comment">// 插件集合</span></span><br><span class="line">  plugin: [<span class="string">''</span>]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h4 id="使用代码：-5"><a href="#使用代码：-5" class="headerlink" title="使用代码："></a>使用代码：</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-amap</span> <span class="attr">vid</span>=<span class="string">"amapDemo"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-amap</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>---------------<br/>Enjoy it ? Donate me ! <br/>欣赏此文？求鼓励，求支持！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.jpg" alt="林某亮 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="林某亮 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端开发/" rel="tag">#前端开发</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/25/Javascript编码规范/" rel="next" title="Javascript编码规范">
+                <i class="fa fa-chevron-left"></i> Javascript编码规范
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2018/07/26/从零开始一个Vue项目/"
+           data-title="从零开始一个Vue项目" data-url="http://yoursite.com/2018/07/26/从零开始一个Vue项目/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="林某亮" />
+          <p class="site-author-name" itemprop="name">林某亮</p>
+          <p class="site-description motion-element" itemprop="description">满地都是六便士<br/>他却抬头看见了月亮</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/vectorlin" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/xianliangyun" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载nodejs-（win64位，版本最好为6-x以上）"><span class="nav-text">下载nodejs （win64位，版本最好为6.x以上）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装淘宝镜像-cnpm"><span class="nav-text">安装淘宝镜像 cnpm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全局安装-vue-cli-2-x"><span class="nav-text">全局安装 vue-cli 2.x</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个基于-webpack-模板的新项目"><span class="nav-text">创建一个基于 webpack 模板的新项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装依赖"><span class="nav-text">安装依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行项目"><span class="nav-text">运行项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装elementUI"><span class="nav-text">安装elementUI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入elementUI"><span class="nav-text">引入elementUI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装axios"><span class="nav-text">安装axios</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入axios"><span class="nav-text">引入axios</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用代码："><span class="nav-text">使用代码：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装vuex"><span class="nav-text">安装vuex</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入vuex"><span class="nav-text">引入vuex</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用代码：-1"><span class="nav-text">使用代码：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装less"><span class="nav-text">安装less</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入less"><span class="nav-text">引入less</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用代码：-2"><span class="nav-text">使用代码：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在vue里面使用jsx语法："><span class="nav-text">在vue里面使用jsx语法：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#以下可以不用安装"><span class="nav-text">以下可以不用安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-font-awesome"><span class="nav-text">安装 font-awesome</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入font-awesome"><span class="nav-text">引入font-awesome</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用代码：-3"><span class="nav-text">使用代码：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装vux"><span class="nav-text">安装vux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入vux"><span class="nav-text">引入vux</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用代码：-4"><span class="nav-text">使用代码：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入amap"><span class="nav-text">引入amap</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用代码：-5"><span class="nav-text">使用代码：</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">林某亮</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"vectorzero"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("oW3tic54jlO5aMSXkvrvsJ9Q-gzGzoHsz", "PcycRoetSenh8YPIwlJ896ts");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

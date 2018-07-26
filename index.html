@@ -240,6 +240,134 @@
             
               
                 
+                <a class="post-title-link" href="/2018/07/26/从零开始一个Vue项目/" itemprop="url">
+                  从零开始一个Vue项目
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-07-26T08:55:34+08:00" content="2018-07-26">
+              2018-07-26
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/07/26/从零开始一个Vue项目/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/26/从零开始一个Vue项目/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2018/07/26/从零开始一个Vue项目/" class="leancloud_visitors" data-flag-title="从零开始一个Vue项目">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="下载nodejs-（win64位，版本最好为6-x以上）"><a href="#下载nodejs-（win64位，版本最好为6-x以上）" class="headerlink" title="下载nodejs （win64位，版本最好为6.x以上）"></a>下载nodejs （win64位，版本最好为6.x以上）</h2><ul>
+<li><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">下载node.js</a></li>
+<li>安装nodejs</li>
+</ul>
+<p><strong>（Win+R输入cmd打开命令行窗口）</strong></p>
+<h2 id="安装淘宝镜像-cnpm"><a href="#安装淘宝镜像-cnpm" class="headerlink" title="安装淘宝镜像 cnpm"></a>安装淘宝镜像 cnpm</h2><p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+<h2 id="全局安装-vue-cli-2-x"><a href="#全局安装-vue-cli-2-x" class="headerlink" title="全局安装 vue-cli 2.x"></a>全局安装 vue-cli 2.x</h2><p>关闭cmd窗口，到放项目的目录下shift+右键打开命令行窗口</p>
+<p><code>cnpm i -g @vue/cli-init</code></p>
+<h2 id="创建一个基于-webpack-模板的新项目"><a href="#创建一个基于-webpack-模板的新项目" class="headerlink" title="创建一个基于 webpack 模板的新项目"></a>创建一个基于 webpack 模板的新项目</h2><p><code>vue init webpack vuecli</code></p>
+<p><strong>（一直回车，只有vue-router选择y，其他均选择n）</strong></p>
+<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><p><code>cd vuecli</code></p>
+<p><code>cnpm i</code></p>
+<h2 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h2><p><code>npm run dev</code></p>
+<h2 id="安装elementUI"><a href="#安装elementUI" class="headerlink" title="安装elementUI"></a>安装elementUI</h2><p><code>cnpm i element-ui --save-dev</code></p>
+<h2 id="引入elementUI"><a href="#引入elementUI" class="headerlink" title="引入elementUI"></a>引入elementUI</h2><p>在<strong>main.js</strong>中添入以下代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">'element-ui'</span> </span><br><span class="line"><span class="keyword">import</span> <span class="string">'element-ui/lib/theme-chalk/index.css'</span></span><br><span class="line">Vue.use(ElementUI, &#123; <span class="attr">size</span>: <span class="string">'small'</span> &#125;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="安装axios"><a href="#安装axios" class="headerlink" title="安装axios"></a>安装axios</h2><p><code>cnpm i axios --save-dev</code></p>
+<h2 id="引入axios"><a href="#引入axios" class="headerlink" title="引入axios"></a>引入axios</h2><p>在 <strong>main.js</strong> 文件中添加以下代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span></span><br><span class="line">Vue.prototype.$http = axios</span><br></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/07/26/从零开始一个Vue项目/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2018/07/25/Javascript编码规范/" itemprop="url">
                   Javascript编码规范
                 </a>
@@ -494,133 +622,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/07/25/CSS编码规范/" itemprop="url">
-                  CSS编码规范
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-07-25T11:32:25+08:00" content="2018-07-25">
-              2018-07-25
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2018/07/25/CSS编码规范/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/25/CSS编码规范/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2018/07/25/CSS编码规范/" class="leancloud_visitors" data-flag-title="CSS编码规范">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h2><p>CSS 作为网页样式的描述语言，在百度一直有着广泛的应用。本文档的目标是使 CSS 代码风格保持一致，容易被理解和被维护。</p>
-<p>虽然本文档是针对 CSS 设计的，但是在使用各种 CSS 的预编译器(如 less、sass、stylus 等)时，适用的部分也应尽量遵循本文档的约定。</p>
-<h2 id="2-代码风格"><a href="#2-代码风格" class="headerlink" title="2 代码风格"></a>2 代码风格</h2><h3 id="2-1-空格"><a href="#2-1-空格" class="headerlink" title="2.1 空格"></a>2.1 空格</h3><h4 id="强制-选择器-与-之间必须包含空格。"><a href="#强制-选择器-与-之间必须包含空格。" class="headerlink" title="[强制] 选择器 与 { 之间必须包含空格。"></a>[强制] <code>选择器</code> 与 <code>{</code> 之间必须包含空格。</h4><p>示例：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.selector</span> &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="强制-属性名-与之后的-之间不允许包含空格，-与-属性值-之间必须包含空格。"><a href="#强制-属性名-与之后的-之间不允许包含空格，-与-属性值-之间必须包含空格。" class="headerlink" title="[强制] 属性名 与之后的 : 之间不允许包含空格， : 与 属性值 之间必须包含空格。"></a>[强制] <code>属性名</code> 与之后的 <code>:</code> 之间不允许包含空格， <code>:</code> 与 <code>属性值</code> 之间必须包含空格。</h4><p>示例：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">margin</span>: 0;</span><br></pre></td></tr></table></figure>
-<h4 id="强制-列表型属性值-书写在单行时，-后必须跟一个空格。"><a href="#强制-列表型属性值-书写在单行时，-后必须跟一个空格。" class="headerlink" title="[强制] 列表型属性值 书写在单行时，, 后必须跟一个空格。"></a>[强制] <code>列表型属性值</code> 书写在单行时，<code>,</code> 后必须跟一个空格。</h4><p>示例：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">font-family</span>: <span class="selector-tag">Arial</span>, <span class="selector-tag">sans-serif</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="2-4-行长度"><a href="#2-4-行长度" class="headerlink" title="2.4 行长度"></a>2.4 行长度</h3><h4 id="强制-每行不得超过-120-个字符，除非单行不可分割。"><a href="#强制-每行不得超过-120-个字符，除非单行不可分割。" class="headerlink" title="[强制] 每行不得超过 120 个字符，除非单行不可分割。"></a>[强制] 每行不得超过 <code>120</code> 个字符，除非单行不可分割。</h4><p>解释：</p>
-<p>常见不可分割的场景为URL超长。</p>
-<h4 id="建议-对于超长的样式，在样式值的-空格-处或-后换行，建议按逻辑分组。"><a href="#建议-对于超长的样式，在样式值的-空格-处或-后换行，建议按逻辑分组。" class="headerlink" title="[建议] 对于超长的样式，在样式值的 空格 处或 , 后换行，建议按逻辑分组。"></a>[建议] 对于超长的样式，在样式值的 <code>空格</code> 处或 <code>,</code> 后换行，建议按逻辑分组。</h4>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/07/25/CSS编码规范/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -661,7 +667,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
