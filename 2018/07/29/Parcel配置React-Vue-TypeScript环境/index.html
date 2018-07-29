@@ -98,7 +98,7 @@ npm install -g parcel-bundler
 npm init -y
 123456&amp;lt;!-- 新建 index.html --&amp;gt;&amp;lt;html&amp;gt;&amp;lt;body&amp;gt;  &amp;lt;script src=&quot;./index.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
 默认地址端口为 l">
-<meta property="og:updated_time" content="2018-07-29T15:15:53.781Z">
+<meta property="og:updated_time" content="2018-07-29T15:51:09.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Parcel配置React/Vue/TypeScript环境">
 <meta name="twitter:description" content="快速使用node 7.6 以上
@@ -312,6 +312,7 @@ npm init -y
 <p>默认地址端口为 <a href="http://localhost:1234" target="_blank" rel="external">localhost:1234</a></p>
 <p>修改端口示例 <code>parcel index.html -p 3304</code></p>
 <h3 id="集成技术栈"><a href="#集成技术栈" class="headerlink" title="集成技术栈"></a>集成技术栈</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//package.json</span></div><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">  <span class="string">"react"</span>: <span class="string">"parcel index-react.html"</span>,</div><div class="line">  <span class="string">"vue"</span>: <span class="string">"parcel index-vue.html"</span>,</div><div class="line">  <span class="string">"ts"</span>: <span class="string">"parcel index-ts.html"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h4 id="React"><a href="#React" class="headerlink" title="React"></a>React</h4><p><code>npm i -S parcel-bundler react react-dom babel-preset-env babel-preset-react</code></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//新建 .babelrc</span></div><div class="line">&#123;</div><div class="line">  <span class="string">"presets"</span>: [<span class="string">"env"</span>,<span class="string">"react"</span>]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 新建 index-react.html --&gt;</span></div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Parcel React<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"react-app"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"src/react/index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -461,7 +462,7 @@ npm init -y
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
