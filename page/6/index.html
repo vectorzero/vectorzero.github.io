@@ -239,8 +239,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/08/css/" itemprop="url">
-                  css
+                <a class="post-title-link" href="/2016/12/18/Git常用命令/" itemprop="url">
+                  Git常用命令
                 </a>
               
             
@@ -253,8 +253,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-08T21:10:28+08:00" content="2016-12-08">
-              2016-12-08
+            <time itemprop="dateCreated" datetime="2016-12-18T00:24:59+08:00" content="2016-12-18">
+              2016-12-18
             </time>
           </span>
 
@@ -264,8 +264,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/08/css/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/08/css/" itemprop="commentsCount"></span>
+                <a href="/2016/12/18/Git常用命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/18/Git常用命令/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -275,7 +275,7 @@
 
           
           
-             <span id="/2016/12/08/css/" class="leancloud_visitors" data-flag-title="css">
+             <span id="/2016/12/18/Git常用命令/" class="leancloud_visitors" data-flag-title="Git常用命令">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -298,10 +298,22 @@
 
       
         
-          
-            <h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h3 id="选中文字样式"><a href="#选中文字样式" class="headerlink" title="选中文字样式"></a>选中文字样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-pseudo">::selection</span>&#123;</div><div class="line">    <span class="attribute">background-color</span>: green;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="垂直居中-（兼容IE6）"><a href="#垂直居中-（兼容IE6）" class="headerlink" title="垂直居中 （兼容IE6）"></a>垂直居中 （兼容IE6）</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</div><div class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</div><div class="line">    <span class="attribute">position</span>: fixed;</div><div class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">margin-left</span>: -<span class="number">100px</span>;</div><div class="line">    <span class="attribute">margin-top</span>: -<span class="number">150px</span>;</div><div class="line">    <span class="attribute">_position</span>: absoulte;</div><div class="line">    <span class="attribute">_left</span>: <span class="built_in">expression</span>(eval(document.documentElement.clientWidth/2+document.document.documentElement.scrollLeft));</div><div class="line">    <span class="attribute">_top</span>: <span class="built_in">expression</span>(eval(document.documentElement.clientHeight/2+document.document.documentElement.scrollTop));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          
+          <h2 id="Git常用命令"><a href="#Git常用命令" class="headerlink" title="Git常用命令"></a>Git常用命令</h2><h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><p><code>$git clone</code> #克隆远程版本库</p>
+<p><code>$git init</code> #初始化本地版本库</p>
+<h3 id="修改和提交"><a href="#修改和提交" class="headerlink" title="修改和提交"></a>修改和提交</h3><p><code>$git status</code> #查看状态</p>
+<p><code>$git diff</code> #查看变更内容</p>
+<p><code>$git add.</code> #跟踪所有改动过的文件</p>
+<p><code>$git add &lt;file&gt;</code> #跟踪指定文件</p>
+<p><code>$git mv &lt;old&gt; &lt;new&gt;</code> #文件改名</p>
+<p><code>$git rm &lt;file&gt;</code> #删除文件</p>
+<p><code>$git rm --cached &lt;file&gt;</code> #停止跟踪文件但不删除</p>
+<p><code>$git commit -m &quot;commit message&quot;</code> #提交所有更新过的文件</p>
+<p><code>$git commit --amend</code> #修改最后一次提交</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/18/Git常用命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -349,8 +361,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/07/hello-world/" itemprop="url">
-                  Hello World
+                <a class="post-title-link" href="/2016/12/10/jQuery选择器/" itemprop="url">
+                  jQuery选择器
                 </a>
               
             
@@ -363,8 +375,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-07T23:27:38+08:00" content="2016-12-07">
-              2016-12-07
+            <time itemprop="dateCreated" datetime="2016-12-10T11:41:01+08:00" content="2016-12-10">
+              2016-12-10
             </time>
           </span>
 
@@ -374,8 +386,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/07/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/07/hello-world/" itemprop="commentsCount"></span>
+                <a href="/2016/12/10/jQuery选择器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/10/jQuery选择器/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -385,7 +397,7 @@
 
           
           
-             <span id="/2016/12/07/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+             <span id="/2016/12/10/jQuery选择器/" class="leancloud_visitors" data-flag-title="jQuery选择器">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -408,18 +420,137 @@
 
       
         
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+          <h2 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h2><p><code>$(&quot;#myELement&quot;)</code> 选择id值等于myElement的元素</p>
+<p><code>$(&quot;div&quot;)</code> 选择所有的div标签元素，返回div元素数组</p>
+<p><code>$(&quot;.myClass&quot;)</code> 选择使用myClass类的css的所有元素</p>
+<p><code>$(&quot;*&quot;)</code> 选择文档中的所有的元素，可进行联合选择：例如$(“#myELement,div,.myclass”)</p>
+<h2 id="层叠选择器"><a href="#层叠选择器" class="headerlink" title="层叠选择器"></a>层叠选择器</h2><p><code>$(&quot;form input&quot;)</code> 选择所有的form元素中的input元素</p>
+<p><code>$(&quot;#main &gt; *&quot;)</code> 选择id值为main的所有的子元素</p>
+<p><code>$(&quot;label + input&quot;)</code> 选择所有的label元素的下一个input元素节点，<br>经测试选择器返回的是label标签后面直接跟一个input标签的所有input标签元素</p>
+<p><code>$(&quot;#prev ~ div&quot;)</code>同胞选择器，该选择器返回的为id为prev的标签元素的所有的属于同一个父元素的div标签</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/10/jQuery选择器/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/10/Sublime-Text-3/" itemprop="url">
+                  Sublime Text 3
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-10T09:54:55+08:00" content="2016-12-10">
+              2016-12-10
+            </time>
+          </span>
 
           
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/10/Sublime-Text-3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/10/Sublime-Text-3/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/10/Sublime-Text-3/" class="leancloud_visitors" data-flag-title="Sublime Text 3">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="下载Sublime-Text-3"><a href="#下载Sublime-Text-3" class="headerlink" title="下载Sublime Text 3"></a>下载Sublime Text 3</h2><p><a href="http://www.sublimetext.com/3">SublimeText3官网下载</a></p>
+<h2 id="安装-Package-Control"><a href="#安装-Package-Control" class="headerlink" title="安装 Package Control"></a>安装 Package Control</h2><p>(1) 按 <em>Ctrl+`</em> 调出 console</p>
+<p>(2) 粘贴以下代码到底部命令行并回车<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import urllib.request,os; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), &apos;wb&apos;).write(urllib.request.urlopen( &apos;http://sublime.wbond.net/&apos; + pf.replace(&apos; &apos;,&apos;%20&apos;)).read())</div></pre></td></tr></table></figure></p>
+<p>(3) 重启Sublime Text 3</p>
+<p>(4) 如果在 <em>perferences</em> -&gt; <em>package settings</em> 中看到 <em>package control</em> 这一项，则表示安装成功</p>
+<h2 id="使用-Package-Control-安装插件"><a href="#使用-Package-Control-安装插件" class="headerlink" title="使用 Package Control 安装插件"></a>使用 Package Control 安装插件</h2><p>(1) 按下 <em>Ctrl+Shift+P</em> 调出命令面板</p>
+<p>(2) 输入 <code>install</code> 调出 Install Package 选项并回车，然后在列表中选中要安装的插件</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/10/Sublime-Text-3/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -450,7 +581,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -491,7 +622,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

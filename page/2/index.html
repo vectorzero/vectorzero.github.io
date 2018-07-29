@@ -239,8 +239,8 @@
             
               
                 
-                <a class="post-title-link" href="/2018/07/23/ES新特性/" itemprop="url">
-                  ES新特性
+                <a class="post-title-link" href="/2018/07/25/Less编码规范/" itemprop="url">
+                  Less编码规范
                 </a>
               
             
@@ -253,8 +253,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-07-23T22:11:40+08:00" content="2018-07-23">
-              2018-07-23
+            <time itemprop="dateCreated" datetime="2018-07-25T11:35:03+08:00" content="2018-07-25">
+              2018-07-25
             </time>
           </span>
 
@@ -264,8 +264,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2018/07/23/ES新特性/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/23/ES新特性/" itemprop="commentsCount"></span>
+                <a href="/2018/07/25/Less编码规范/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/25/Less编码规范/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -275,7 +275,7 @@
 
           
           
-             <span id="/2018/07/23/ES新特性/" class="leancloud_visitors" data-flag-title="ES新特性">
+             <span id="/2018/07/25/Less编码规范/" class="leancloud_visitors" data-flag-title="Less编码规范">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -298,16 +298,24 @@
 
       
         
-          <h2 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> a = ~~(<span class="built_in">Math</span>.random())*<span class="number">10</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">`hello,<span class="subst">$&#123;a&#125;</span>`</span>);</div></pre></td></tr></table></figure>
-<h2 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="keyword">const</span> b = [<span class="number">4</span>,...a,<span class="number">6</span>];</div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">//[4,1,2,3,6]</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> &#123;c,d,...z&#125; = &#123;<span class="attr">c</span>:<span class="number">1</span>,<span class="attr">d</span>:<span class="number">2</span>,<span class="attr">e</span>:<span class="number">4</span>,<span class="attr">f</span>:<span class="number">6</span>&#125;;</div><div class="line"><span class="built_in">console</span>.log(c) <span class="comment">//1</span></div><div class="line"><span class="built_in">console</span>.log(d) <span class="comment">//2</span></div><div class="line"><span class="built_in">console</span>.log(z) <span class="comment">//&#123;e:4,f:6&#125;</span></div></pre></td></tr></table></figure>
-<h2 id="Array-find"><a href="#Array-find" class="headerlink" title="Array.find"></a>Array.find</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr = [</div><div class="line">    &#123;<span class="attr">name</span>:<span class="string">'aa'</span>,<span class="attr">value</span>:<span class="string">'1'</span>,<span class="attr">type</span>:<span class="string">'a'</span>&#125;,</div><div class="line">    &#123;<span class="attr">name</span>:<span class="string">'bb'</span>,<span class="attr">value</span>:<span class="string">'2'</span>,<span class="attr">type</span>:<span class="string">'b'</span>&#125;,</div><div class="line">    &#123;<span class="attr">name</span>:<span class="string">'cc'</span>,<span class="attr">value</span>:<span class="string">'3'</span>,<span class="attr">type</span>:<span class="string">'c'</span>&#125;,</div><div class="line">    &#123;<span class="attr">name</span>:<span class="string">'cc'</span>,<span class="attr">value</span>:<span class="string">'4'</span>,<span class="attr">type</span>:<span class="string">'d'</span>&#125;    </div><div class="line">]</div><div class="line"><span class="keyword">const</span> obj = arr.find(<span class="function"><span class="params">item</span> =&gt;</span> item.name === <span class="string">'aa'</span> &amp;&amp; item.value === <span class="string">'1'</span>);</div><div class="line"><span class="built_in">console</span>.log(obj) <span class="comment">// &#123;name:'aa',value:'1',type:'a'&#125;</span></div></pre></td></tr></table></figure>
-<h2 id="跨模块常量"><a href="#跨模块常量" class="headerlink" title="跨模块常量"></a>跨模块常量</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//a.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> A = <span class="number">1</span>;</div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> B = <span class="number">2</span>;</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//b.js</span></div><div class="line"><span class="keyword">import</span> ^ <span class="keyword">as</span> hello <span class="keyword">from</span> ‘./a.js’;</div><div class="line"><span class="built_in">console</span>.log(hello.A);<span class="comment">//1</span></div><div class="line"><span class="built_in">console</span>.log(hello.B);<span class="comment">//2</span></div></pre></td></tr></table></figure>
-<h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h2><p>如果解构不成功。变量的值就等于<code>undefined</code></p>
-<p>解构赋值允许指定默认值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> [ foo = <span class="literal">true</span> ] = [];</div><div class="line">foo <span class="comment">// true</span></div><div class="line">[ x,y = ‘b’ ] = [‘a’] <span class="comment">//x=’a’,y=’b’</span></div><div class="line">[ x,y = ‘b’] = [‘a’, <span class="literal">undefined</span>] <span class="comment">//x=’a’ ,y=’b’</span></div></pre></td></tr></table></figure></p>
-<p>注意：ES6内部使用严格相等运算符(===)判断一个位置是否有值。所以，如果一个数组成员不严格等于<code>undefined</code>，默认值是不会生效的。</p>
+          <h2 id="代码组织"><a href="#代码组织" class="headerlink" title="代码组织"></a>代码组织</h2><p>代码按如下形式按顺序组织：</p>
+<ol>
+<li><code>@import</code></li>
+<li>变量声明</li>
+<li>样式声明</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// good</div><div class="line">@import "est/all.less";</div><div class="line"></div><div class="line">@default-text-color: #333;</div><div class="line"></div><div class="line">.page &#123;</div><div class="line">    width: 960px;</div><div class="line">    margin: 0 auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="import-语句"><a href="#import-语句" class="headerlink" title="@import 语句"></a><code>@import</code> 语句</h2><p><code>@import</code> 语句引用的文件必须写在一对引号内，<code>.less</code> 后缀不得省略。引号使用 <code>&#39;</code> 和 <code>&quot;</code> 均可，但在同一项目内必须统一。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// bad</div><div class="line">@import 'est/all';</div><div class="line">@import "my/mixins.less";</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// good</div><div class="line">@import "est/all.less";</div><div class="line">@import "my/mixins.less";</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h2><h3 id="混入（Mixin）"><a href="#混入（Mixin）" class="headerlink" title="混入（Mixin）"></a>混入（Mixin）</h3><p>Mixin 和后面的空格之间不得包含空格。在给 mixin 传递参数时，在参数分隔符（<code>,</code> / <code>;</code>）后必须保留一个空格：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// bad</div><div class="line">.box &#123;</div><div class="line">    .size(30px,20px);</div><div class="line">    .clearfix ();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// good</div><div class="line">.box &#123;</div><div class="line">    .size(30px, 20px);</div><div class="line">    .clearfix();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2018/07/23/ES新特性/#more" rel="contents">
+            <a class="btn" href="/2018/07/25/Less编码规范/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -358,8 +366,8 @@
             
               
                 
-                <a class="post-title-link" href="/2018/07/23/Command-Line-Interface/" itemprop="url">
-                  Command Line Interface
+                <a class="post-title-link" href="/2018/07/25/CSS编码规范/" itemprop="url">
+                  CSS编码规范
                 </a>
               
             
@@ -372,8 +380,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-07-23T22:04:29+08:00" content="2018-07-23">
-              2018-07-23
+            <time itemprop="dateCreated" datetime="2018-07-25T11:32:25+08:00" content="2018-07-25">
+              2018-07-25
             </time>
           </span>
 
@@ -383,8 +391,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2018/07/23/Command-Line-Interface/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/23/Command-Line-Interface/" itemprop="commentsCount"></span>
+                <a href="/2018/07/25/CSS编码规范/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/25/CSS编码规范/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -394,7 +402,7 @@
 
           
           
-             <span id="/2018/07/23/Command-Line-Interface/" class="leancloud_visitors" data-flag-title="Command Line Interface">
+             <span id="/2018/07/25/CSS编码规范/" class="leancloud_visitors" data-flag-title="CSS编码规范">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -417,16 +425,22 @@
 
       
         
-          
-            <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h3><p><em>lxl-cli-demo</em></p>
-<h3 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h3><p><code>cd lxl-cli-demo</code></p>
-<p><code>npm init -y</code></p>
-<h3 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h3><p><em>./bin/index.js</em><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/usr/bin/env node</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'hello cli'</span>)</div></pre></td></tr></table></figure></p>
-<h3 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h3><p><em>package.json</em><br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"lxl-cli-demo"</span>,</div><div class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0"</span>,</div><div class="line">  <span class="attr">"description"</span>: <span class="string">""</span>,</div><div class="line">  <span class="attr">"main"</span>: <span class="string">"index.js"</span>,</div><div class="line">  <span class="attr">"bin"</span>:&#123;</div><div class="line">    <span class="attr">"lxl-cli"</span>: <span class="string">"./bin/index.js"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"keywords"</span>: [],</div><div class="line">  <span class="attr">"author"</span>: <span class="string">""</span>,</div><div class="line">  <span class="attr">"license"</span>: <span class="string">"ISC"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="全局安装"><a href="#全局安装" class="headerlink" title="全局安装"></a>全局安装</h3><p><code>npm install -g</code></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>打开cmd，输入<code>lxl-cli</code></p>
-
-          
+          <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h2><p>CSS 作为网页样式的描述语言，在百度一直有着广泛的应用。本文档的目标是使 CSS 代码风格保持一致，容易被理解和被维护。</p>
+<p>虽然本文档是针对 CSS 设计的，但是在使用各种 CSS 的预编译器(如 less、sass、stylus 等)时，适用的部分也应尽量遵循本文档的约定。</p>
+<h2 id="2-代码风格"><a href="#2-代码风格" class="headerlink" title="2 代码风格"></a>2 代码风格</h2><h3 id="2-1-空格"><a href="#2-1-空格" class="headerlink" title="2.1 空格"></a>2.1 空格</h3><h4 id="强制-选择器-与-之间必须包含空格。"><a href="#强制-选择器-与-之间必须包含空格。" class="headerlink" title="[强制] 选择器 与 { 之间必须包含空格。"></a>[强制] <code>选择器</code> 与 <code>{</code> 之间必须包含空格。</h4><p>示例：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.selector</span> &#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="强制-属性名-与之后的-之间不允许包含空格，-与-属性值-之间必须包含空格。"><a href="#强制-属性名-与之后的-之间不允许包含空格，-与-属性值-之间必须包含空格。" class="headerlink" title="[强制] 属性名 与之后的 : 之间不允许包含空格， : 与 属性值 之间必须包含空格。"></a>[强制] <code>属性名</code> 与之后的 <code>:</code> 之间不允许包含空格， <code>:</code> 与 <code>属性值</code> 之间必须包含空格。</h4><p>示例：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">margin</span>: 0;</div></pre></td></tr></table></figure>
+<h4 id="强制-列表型属性值-书写在单行时，-后必须跟一个空格。"><a href="#强制-列表型属性值-书写在单行时，-后必须跟一个空格。" class="headerlink" title="[强制] 列表型属性值 书写在单行时，, 后必须跟一个空格。"></a>[强制] <code>列表型属性值</code> 书写在单行时，<code>,</code> 后必须跟一个空格。</h4><p>示例：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">font-family</span>: <span class="selector-tag">Arial</span>, <span class="selector-tag">sans-serif</span>;</div></pre></td></tr></table></figure>
+<h3 id="2-4-行长度"><a href="#2-4-行长度" class="headerlink" title="2.4 行长度"></a>2.4 行长度</h3><h4 id="强制-每行不得超过-120-个字符，除非单行不可分割。"><a href="#强制-每行不得超过-120-个字符，除非单行不可分割。" class="headerlink" title="[强制] 每行不得超过 120 个字符，除非单行不可分割。"></a>[强制] 每行不得超过 <code>120</code> 个字符，除非单行不可分割。</h4><p>解释：</p>
+<p>常见不可分割的场景为URL超长。</p>
+<h4 id="建议-对于超长的样式，在样式值的-空格-处或-后换行，建议按逻辑分组。"><a href="#建议-对于超长的样式，在样式值的-空格-处或-后换行，建议按逻辑分组。" class="headerlink" title="[建议] 对于超长的样式，在样式值的 空格 处或 , 后换行，建议按逻辑分组。"></a>[建议] 对于超长的样式，在样式值的 <code>空格</code> 处或 <code>,</code> 后换行，建议按逻辑分组。</h4>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/07/25/CSS编码规范/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -474,8 +488,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/03/Nodejs上传图片/" itemprop="url">
-                  Nodejs上传图片
+                <a class="post-title-link" href="/2018/07/25/Vue编码规范/" itemprop="url">
+                  Vue编码规范
                 </a>
               
             
@@ -488,8 +502,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-03T16:27:02+08:00" content="2017-04-03">
-              2017-04-03
+            <time itemprop="dateCreated" datetime="2018-07-25T11:30:03+08:00" content="2018-07-25">
+              2018-07-25
             </time>
           </span>
 
@@ -499,8 +513,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/04/03/Nodejs上传图片/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/03/Nodejs上传图片/" itemprop="commentsCount"></span>
+                <a href="/2018/07/25/Vue编码规范/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/25/Vue编码规范/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -510,7 +524,7 @@
 
           
           
-             <span id="/2017/04/03/Nodejs上传图片/" class="leancloud_visitors" data-flag-title="Nodejs上传图片">
+             <span id="/2018/07/25/Vue编码规范/" class="leancloud_visitors" data-flag-title="Vue编码规范">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -533,14 +547,14 @@
 
       
         
-          <p>新建项目文件夹</p>
-<p>在项目目录下打开命令窗口,输入</p>
-<p><code>npm install formidable --save-dev</code></p>
-<p>新建tmp,img文件夹</p>
-<p>新建server.js,starter.js,uploader.js,shower.js文件</p>
-<p>文件内容如下所示</p>
+          <h3 id="组件名为多个单词"><a href="#组件名为多个单词" class="headerlink" title="组件名为多个单词"></a>组件名为多个单词</h3><p><strong>组件名应该始终是多个单词的，根组件 <code>App</code> 除外。</strong></p>
+<p>这样做可以避免跟现有的以及未来的 HTML 元素相冲突，因为所有的 HTML 元素名称都是单个单词的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line">Vue.component(<span class="string">'todo'</span>, &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'Todo'</span>,</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// good</span></div><div class="line">Vue.component(<span class="string">'todo-item'</span>, &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'TodoItem'</span>,</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2017/04/03/Nodejs上传图片/#more" rel="contents">
+            <a class="btn" href="/2018/07/25/Vue编码规范/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -574,7 +588,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -615,7 +629,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
