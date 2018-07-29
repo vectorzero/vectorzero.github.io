@@ -86,12 +86,13 @@
 
 <meta name="description" content="满地都是六便士他却抬头看见了月亮">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Vector's Blog">
+<meta property="og:title" content="Vector&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Vector's Blog">
+<meta property="og:site_name" content="Vector&#39;s Blog">
 <meta property="og:description" content="满地都是六便士他却抬头看见了月亮">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vector's Blog">
+<meta name="twitter:title" content="Vector&#39;s Blog">
 <meta name="twitter:description" content="满地都是六便士他却抬头看见了月亮">
 
 
@@ -239,141 +240,6 @@
             
               
                 
-                <a class="post-title-link" href="/2018/07/29/Parcel配置React-Vue-TypeScript环境/" itemprop="url">
-                  Parcel配置React/Vue/TypeScript环境
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-07-29T23:14:44+08:00" content="2018-07-29">
-              2018-07-29
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2018/07/29/Parcel配置React-Vue-TypeScript环境/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/29/Parcel配置React-Vue-TypeScript环境/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2018/07/29/Parcel配置React-Vue-TypeScript环境/" class="leancloud_visitors" data-flag-title="Parcel配置React/Vue/TypeScript环境">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="快速使用"><a href="#快速使用" class="headerlink" title="快速使用"></a>快速使用</h3><p><em>node 7.6 以上</em></p>
-<p><code>npm install -g parcel-bundler</code></p>
-<p><code>npm init -y</code></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 新建 index.html --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>默认地址端口为 <a href="http://localhost:1234" target="_blank" rel="external">localhost:1234</a></p>
-<p>修改端口示例 <code>parcel index.html -p 3304</code></p>
-<h3 id="集成技术栈"><a href="#集成技术栈" class="headerlink" title="集成技术栈"></a>集成技术栈</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//package.json</span></div><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">  <span class="string">"react"</span>: <span class="string">"parcel index-react.html"</span>,</div><div class="line">  <span class="string">"vue"</span>: <span class="string">"parcel index-vue.html"</span>,</div><div class="line">  <span class="string">"ts"</span>: <span class="string">"parcel index-ts.html"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="React"><a href="#React" class="headerlink" title="React"></a>React</h4><p><code>npm i -S parcel-bundler react react-dom babel-preset-env babel-preset-react</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//新建 .babelrc</span></div><div class="line">&#123;</div><div class="line">  <span class="string">"presets"</span>: [<span class="string">"env"</span>,<span class="string">"react"</span>]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 新建 index-react.html --&gt;</span></div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Parcel React<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"react-app"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"src/react/index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//新建 src/react/index.js</span></div><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span>;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hello</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello React<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">Hello</span> /&gt;</span>, document.getElementById('react-app'));</span></div></pre></td></tr></table></figure>
-<p><code>npm run react</code></p>
-<h4 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h4><p><code>npm i -S vue parcel-plugin-vue</code></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 新建 index-vue.html --&gt;</span></div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Parcel Vue<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"vue-app"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"src/vue/index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//新建 src/vue/index.js</span></div><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./app.vue'</span>;</div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">    <span class="attr">el</span>: <span class="string">'#vue-app'</span>,</div><div class="line">    <span class="attr">render</span>: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 新建 src/vue/app.vue --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello Vue<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><code>npm run vue</code></p>
-<h4 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h4><p><code>npm i -S typescript</code></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 新建 index-ts.html --&gt;</span></div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Parcel TypeScript<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">"ts-app"</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"src/typescript/index.ts"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//新建 src/typescript/index.ts</span></div><div class="line"><span class="keyword">interface</span> Name &#123;</div><div class="line">    value: <span class="built_in">string</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">showName</span>(<span class="params">name: Name</span>)</span>&#123;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">'ts-app'</span>).innerHTML = <span class="string">'Hello '</span> + name.value;</div><div class="line">&#125;</div><div class="line">showName(&#123;value: <span class="string">'TypeScript'</span>&#125;);</div></pre></td></tr></table></figure>
-<p><code>npm run ts</code></p>
-<h3 id="生产环境"><a href="#生产环境" class="headerlink" title="生产环境"></a>生产环境</h3><p>设置环境变量： <code>parcel build index.html NODE_ENV=production</code></p>
-<p>设置输出目录： <code>parcel build index.html -d build/output</code></p>
-<p>设置要提供服务的公共 URL：<code>parcel build index.html --public-url ./</code></p>
-<p>禁用压缩： <code>parcel build index.html --no-minify</code></p>
-<p>禁用文件系统缓存： <code>parcel build index.html --no-cache</code></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2018/07/26/从零开始一个Vue项目/" itemprop="url">
                   从零开始一个Vue项目
                 </a>
@@ -434,7 +300,7 @@
       
         
           <h2 id="下载nodejs-（win64位，版本最好为6-x以上）"><a href="#下载nodejs-（win64位，版本最好为6-x以上）" class="headerlink" title="下载nodejs （win64位，版本最好为6.x以上）"></a>下载nodejs （win64位，版本最好为6.x以上）</h2><ul>
-<li><a href="http://nodejs.cn/download/">下载node.js</a></li>
+<li><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">下载node.js</a></li>
 <li>安装nodejs</li>
 </ul>
 <p><strong>（Win+R输入cmd打开命令行窗口）</strong></p>
@@ -447,9 +313,9 @@
 <p><code>cnpm i</code></p>
 <h2 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h2><p><code>npm run dev</code></p>
 <h2 id="安装elementUI"><a href="#安装elementUI" class="headerlink" title="安装elementUI"></a>安装elementUI</h2><p><code>cnpm i element-ui --save-dev</code></p>
-<h2 id="引入elementUI"><a href="#引入elementUI" class="headerlink" title="引入elementUI"></a>引入elementUI</h2><p>在<strong>main.js</strong>中添入以下代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">'element-ui'</span> </div><div class="line"><span class="keyword">import</span> <span class="string">'element-ui/lib/theme-chalk/index.css'</span></div><div class="line">Vue.use(ElementUI, &#123; <span class="attr">size</span>: <span class="string">'small'</span> &#125;)</div></pre></td></tr></table></figure></p>
+<h2 id="引入elementUI"><a href="#引入elementUI" class="headerlink" title="引入elementUI"></a>引入elementUI</h2><p>在<strong>main.js</strong>中添入以下代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">'element-ui'</span> </span><br><span class="line"><span class="keyword">import</span> <span class="string">'element-ui/lib/theme-chalk/index.css'</span></span><br><span class="line">Vue.use(ElementUI, &#123; <span class="attr">size</span>: <span class="string">'small'</span> &#125;)</span><br></pre></td></tr></table></figure></p>
 <h2 id="安装axios"><a href="#安装axios" class="headerlink" title="安装axios"></a>安装axios</h2><p><code>cnpm i axios --save-dev</code></p>
-<h2 id="引入axios"><a href="#引入axios" class="headerlink" title="引入axios"></a>引入axios</h2><p>在 <strong>main.js</strong> 文件中添加以下代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span></div><div class="line">Vue.prototype.$http = axios</div></pre></td></tr></table></figure></p>
+<h2 id="引入axios"><a href="#引入axios" class="headerlink" title="引入axios"></a>引入axios</h2><p>在 <strong>main.js</strong> 文件中添加以下代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span></span><br><span class="line">Vue.prototype.$http = axios</span><br></pre></td></tr></table></figure></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2018/07/26/从零开始一个Vue项目/#more" rel="contents">
               阅读全文 &raquo;
@@ -570,7 +436,7 @@
 <li><code>null</code></li>
 <li><code>undefined</code></li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> foo = <span class="number">1</span>;</div><div class="line"><span class="keyword">let</span> bar = foo;</div><div class="line"></div><div class="line">bar = <span class="number">9</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(foo, bar); <span class="comment">// =&gt; 1, 9</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> bar = foo;</span><br><span class="line"></span><br><span class="line">bar = <span class="number">9</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(foo, bar); <span class="comment">// =&gt; 1, 9</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>1.2 <strong>复杂类型</strong>: 通过引用的方式存取复杂类型。</p>
 <ul>
@@ -578,7 +444,7 @@
 <li><code>数组</code></li>
 <li><code>函数</code></li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> foo = [<span class="number">1</span>, <span class="number">2</span>];</div><div class="line"><span class="keyword">const</span> bar = foo;</div><div class="line"></div><div class="line">bar[<span class="number">0</span>] = <span class="number">9</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(foo[<span class="number">0</span>], bar[<span class="number">0</span>]); <span class="comment">// =&gt; 9, 9</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"><span class="keyword">const</span> bar = foo;</span><br><span class="line"></span><br><span class="line">bar[<span class="number">0</span>] = <span class="number">9</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(foo[<span class="number">0</span>], bar[<span class="number">0</span>]); <span class="comment">// =&gt; 9, 9</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ul>
@@ -586,20 +452,147 @@
 <blockquote>
 <p>为什么？这能确保你无法对引用重新赋值，也不会导致出现 bug 或难以理解。</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="number">2</span>;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">const</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">const</span> b = <span class="number">2</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">const</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> b = <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>2.2 如果你一定需要可变动的引用，使用 <code>let</code> 代替 <code>var</code>。</p>
 <blockquote>
 <p>为什么？因为  <code>let</code> 是块级作用域，而 <code>var</code> 是函数作用域。</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">var</span> count = <span class="number">1</span>;</div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">  count += <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// good, use the let.</span></div><div class="line"><span class="keyword">let</span> count = <span class="number">1</span>;</div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">  count += <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">var</span> count = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  count += <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good, use the let.</span></span><br><span class="line"><span class="keyword">let</span> count = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  count += <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>2.3 注意 <code>let</code> 和 <code>const</code> 都是块级作用域。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// const 和 let 只存在于它们被定义的区块内。</span></div><div class="line">&#123;</div><div class="line">  <span class="keyword">let</span> a = <span class="number">1</span>;</div><div class="line">  <span class="keyword">const</span> b = <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">// ReferenceError</span></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">// ReferenceError</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// const 和 let 只存在于它们被定义的区块内。</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">const</span> b = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// ReferenceError</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// ReferenceError</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
           <div class="post-more-link text-center">
             <a class="btn" href="/2018/07/25/Javascript编码规范/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/07/25/Less编码规范/" itemprop="url">
+                  Less编码规范
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-07-25T11:35:03+08:00" content="2018-07-25">
+              2018-07-25
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/07/25/Less编码规范/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/25/Less编码规范/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2018/07/25/Less编码规范/" class="leancloud_visitors" data-flag-title="Less编码规范">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="代码组织"><a href="#代码组织" class="headerlink" title="代码组织"></a>代码组织</h2><p>代码按如下形式按顺序组织：</p>
+<ol>
+<li><code>@import</code></li>
+<li>变量声明</li>
+<li>样式声明</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// good</span><br><span class="line">@<span class="keyword">import</span> <span class="string">"est/all.less"</span>;</span><br><span class="line"></span><br><span class="line">@default-text-color: #333;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.page</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">960px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="import-语句"><a href="#import-语句" class="headerlink" title="@import 语句"></a><code>@import</code> 语句</h2><p><code>@import</code> 语句引用的文件必须写在一对引号内，<code>.less</code> 后缀不得省略。引号使用 <code>&#39;</code> 和 <code>&quot;</code> 均可，但在同一项目内必须统一。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// bad</span><br><span class="line">@<span class="keyword">import</span> <span class="string">'est/all'</span>;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">"my/mixins.less"</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// good</span><br><span class="line">@<span class="keyword">import</span> <span class="string">"est/all.less"</span>;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">"my/mixins.less"</span>;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h2><h3 id="混入（Mixin）"><a href="#混入（Mixin）" class="headerlink" title="混入（Mixin）"></a>混入（Mixin）</h3><p>Mixin 和后面的空格之间不得包含空格。在给 mixin 传递参数时，在参数分隔符（<code>,</code> / <code>;</code>）后必须保留一个空格：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// bad</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    .size(30px,20px);</span><br><span class="line">    <span class="selector-class">.clearfix</span> ();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// good</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    .size(30px, 20px);</span><br><span class="line">    <span class="selector-class">.clearfix</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/07/25/Less编码规范/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -674,7 +667,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
